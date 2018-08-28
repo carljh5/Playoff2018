@@ -34,7 +34,9 @@ public class Movement : MonoBehaviour {
 
             currentSpeed *= moveDirectionLeft ? -1 : 1;
 
-            gameObject.transform.Translate(new Vector3(currentSpeed, 0));
+            var t = PhysicsBody.transform;
+            
+            PhysicsBody.MovePosition( new Vector2(t.position.x+currentSpeed,t.position.y));
         }
     }
     
