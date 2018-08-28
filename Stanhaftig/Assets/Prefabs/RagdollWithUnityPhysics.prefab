@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 114197666823618208}
   m_Layer: 0
   m_Name: SwordHand
-  m_TagString: Player
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2166,7 +2166,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   PhysicsBody: {fileID: 50400934649502304}
   Sword: {fileID: 50823788604994680}
-  SwordForce: 1.5
+  SwordForce: 1
   direction: -1
 --- !u!114 &114919962093069602
 MonoBehaviour:
