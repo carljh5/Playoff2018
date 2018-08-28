@@ -11,7 +11,8 @@ public class RagdollAnimator : MonoBehaviour
     [Serializable]
     public class Limb {
         public string name = "limb";
-        public SpriteRenderer[] sprites;
+        public Anima2D.Bone2D parentBone;
+        //public SpriteRenderer[] sprites;
     }
 
     public List<Limb> detachableLimbs = new List<Limb>(); 
