@@ -8,9 +8,11 @@ public class Movement : MonoBehaviour {
     public KeyCode Left, Right,Hit;
 
     [Header("Movement")]
+    [HideInInspector]
     public float TopSpeed;
+    [HideInInspector]
     public float SecsUntillTopSpeed;
-    public AnimationCurve AccelarationCurve;
+    [HideInInspector] public AnimationCurve AccelarationCurve;
     private float currentSpeed;
     private bool moveDirectionLeft;
     private float StartMoveTime;
@@ -18,6 +20,7 @@ public class Movement : MonoBehaviour {
 
     [Header("Sword")]
     public Rigidbody2D Sword;
+    [HideInInspector]
     public float SwordForce;
     public int direction;
     
