@@ -17,10 +17,6 @@ public class LimbManager : MonoBehaviour
 
     public List<Limb> limbs = new List<Limb>();
 
-    public void DetachLimb() {
-        DetachLimb(limbs[0]);
-    }
-
     public void DetachLimb(Limb limb) {
         //spawn blood particles and child them to the connected rigidbody of the joint at the joints position;
         Instantiate(bloodParticlesPrefab, limb.parentJoint.transform.position, Quaternion.identity, limb.parentJoint.connectedBody.transform);
@@ -52,9 +48,4 @@ public class LimbManager : MonoBehaviour
         DetachLimb(limbs[0]);
     }
 	
-	// Update is called once per frame
-    void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
-            DetachLimb();
-	}
 }
