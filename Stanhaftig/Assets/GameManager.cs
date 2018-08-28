@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour {
         Player1.Movement.SwordForce = SwordForce;
         Player2.Movement.SwordForce = SwordForce;
 
+        Player1.gameObject.SetActive(false);
+        Player2.gameObject.SetActive(false);
+
 
 
     }
@@ -59,11 +62,23 @@ public class GameManager : MonoBehaviour {
             Debug.LogWarning("Player " + Player + " does not exist");
     }
 
+    void Update()
+    {
+        StartGame();
+    }
+
     public void StartGame()
     {
-        if (Input.GetKeyDown("W"))
+        if (Input.GetKeyDown(Player1.Movement.Hit))
         {
-            Instantiate(Player1);
+            Player1.gameObject.SetActive(true);
+            Player1.KeyHintCanvas.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(Player2.Movement.Hit))
+        {
+            Player2.gameObject.SetActive(true);
+            Player2.KeyHintCanvas.SetActive(false);
         }
     }
 }
