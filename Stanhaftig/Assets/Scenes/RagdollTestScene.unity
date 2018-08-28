@@ -113,6 +113,40 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &232194905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1513364699624500, guid: a2c2eeb682cdc407b87fb31981715d8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 536326907}
+--- !u!95 &232194908
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232194905}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1dc7b264894e94080a93101de124256c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &232194909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232194905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c42b9d3909d1410fb98f24c665eee57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &417160670
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +261,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4638032996286920, guid: a2c2eeb682cdc407b87fb31981715d8d, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945294340159400, guid: a2c2eeb682cdc407b87fb31981715d8d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345193033162650, guid: a2c2eeb682cdc407b87fb31981715d8d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534565037978226, guid: a2c2eeb682cdc407b87fb31981715d8d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119572434658014, guid: a2c2eeb682cdc407b87fb31981715d8d, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791841601902190, guid: a2c2eeb682cdc407b87fb31981715d8d, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
