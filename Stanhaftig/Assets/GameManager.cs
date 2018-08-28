@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
         if (Player == 1)
         {
             instance.Player1.LimbManager.LoseLimb();
+            TauntManager.PlayTaunt(instance.Player2, instance.Player2);
         }
         else if (Player == 2)
         {
