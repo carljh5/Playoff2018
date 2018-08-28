@@ -22,9 +22,15 @@ public class SpeechScript : MonoBehaviour
 
         if (Input.GetKeyDown("space"))
         {
-            SpeechBubble.SetActive(true);
-            m_Text.text = RandomTaunts[Random.Range(0, RandomTaunts.Length)];
+            Speak();
         }
 
+    }
+
+    public void Speak()
+    {
+        SoundManager.PlaySpeech();
+        SpeechBubble.SetActive(true);
+        m_Text.text = RandomTaunts[Random.Range(0, RandomTaunts.Length)];
     }
 }

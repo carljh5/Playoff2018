@@ -49,4 +49,11 @@ public class SoundManager : MonoBehaviour {
             instance.FxAudio.PlayOneShot(instance.WinMusic);
     }
 
+    public int RandomRangeExcept(int min, int max, int except)
+    {
+        int random = Random.Range(min, max);
+        if (random >= except) random = (random + 1) % max;
+        return random;
+    }
+
 }
