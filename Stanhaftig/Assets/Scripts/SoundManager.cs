@@ -11,12 +11,14 @@ public class SoundManager : MonoBehaviour {
     public AudioClip[] YellAudios;
     public AudioClip[] SpeechAudios;
     public AudioClip WinMusic;
+    int lastSpeech;
 
 
     private void Start()
     {
         if (instance == null)
             instance = this;
+            lastSpeech = 0;
     }
     
     public static void PlayHit()
@@ -40,7 +42,9 @@ public class SoundManager : MonoBehaviour {
     public static void PlaySpeech()
     {
         if (instance.SpeechAudios.Length > 0 && instance.FxAudio)
-            instance.FxAudio.PlayOneShot(instance.SpeechAudios[Random.Range(0, instance.SpeechAudios.Length)]);
+            
+            instance.FxAudio.PlayOneShot(instance.SpeechAudios[instance.lastSpeech]);
+            instance.lastSpeech = instance.RandomRangeExcept(0, instance.SpeechAudios.Length, instance.lastSpeech);
     }
 
     public static void PlayWin()
