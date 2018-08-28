@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-    public KeyCode Left, Right;
+    [Header("Key mapping")]
+    public KeyCode Left, Right,Hit;
+
+    [Header("Movement")]
     public float TopSpeed;
     public float SecsUntillTopSpeed;
     public AnimationCurve AccelarationCurve;
@@ -13,6 +16,11 @@ public class Movement : MonoBehaviour {
     private float StartMoveTime;
     public Rigidbody2D PhysicsBody;
 
+    [Header("Sword")]
+    public Rigidbody2D Sword;
+    public float SwordForce;
+    public int direction;
+    
 
 
     private void Update()
@@ -37,6 +45,16 @@ public class Movement : MonoBehaviour {
             var t = PhysicsBody.transform;
             
             PhysicsBody.MovePosition( new Vector2(t.position.x+currentSpeed,t.position.y));
+        }
+
+        if(Input.GetKeyDown(Hit) && Sword)
+        {
+            var t = Sword.transform;
+
+            //if sword is up hit down and vice versa
+            var x = t.rotation.z > 0 ? SwordForce : -SwordForce;
+
+            Sword.MovePosition(new Vector2(t.position.x+SwordForce*direction , t.position.y + SwordForce));
         }
     }
     

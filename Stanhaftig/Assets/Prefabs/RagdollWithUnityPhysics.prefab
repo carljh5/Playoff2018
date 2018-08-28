@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 61361492667775156}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 233832721942839944}
   m_Layer: 0
   m_Name: L_Arm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 233527878209273226}
   m_Layer: 0
   m_Name: L_Shoulder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 114929984998919508}
   m_Layer: 0
   m_Name: RagdollWithUnityPhysics
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 233696490414653646}
   m_Layer: 0
   m_Name: R_Shoulder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 4162620115304598}
   m_Layer: 0
   m_Name: BURLY-MAN_1_swordsman_model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 233538638693004252}
   m_Layer: 0
   m_Name: RLowerArmBone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 233708718274080698}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 233748961282405866}
   m_Layer: 0
   m_Name: L_Thigh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 233095812874415146}
   m_Layer: 0
   m_Name: L_Leg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 4112254082361232}
   m_Layer: 0
   m_Name: HipBone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 233823770327361340}
   m_Layer: 0
   m_Name: R_Thigh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -715,9 +715,10 @@ GameObject:
   - component: {fileID: 50823788604994680}
   - component: {fileID: 61052210093018028}
   - component: {fileID: 233423205496616972}
+  - component: {fileID: 114705370978049192}
   m_Layer: 0
-  m_Name: L_Hand
-  m_TagString: Untagged
+  m_Name: SwordHand
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -880,7 +881,7 @@ GameObject:
   - component: {fileID: 233997311901026798}
   m_Layer: 0
   m_Name: R_Leg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,8 +1607,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1291415029487738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: -1.72, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.77, y: -1.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4162620115304598}
   m_Father: {fileID: 0}
@@ -2111,17 +2112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24748087, y: 0.4968972}
   m_EdgeRadius: 0
---- !u!114 &114370188271294966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1291415029487738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 053859761ef7c7243a0ca7462284d176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114485133930934798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2135,6 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Left: 115
   Right: 100
+  Hit: 102
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
   AccelarationCurve:
@@ -4224,7 +4215,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.028999977, y: 0.13900043}
-  m_ConnectedAnchor: {x: 0.0000000050663616, y: -0.3050002}
+  m_ConnectedAnchor: {x: -0.000000054538283, y: -0.3050002}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4270,7 +4261,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.097406216, y: 0.15628248}
-  m_ConnectedAnchor: {x: -0.33272606, y: 0.26993698}
+  m_ConnectedAnchor: {x: -0.332726, y: 0.26993698}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4293,7 +4284,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.15500289, y: -0.28201705}
+  m_ConnectedAnchor: {x: 0.15500277, y: -0.28201702}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4339,7 +4330,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.009761341, y: -0.44896302}
-  m_ConnectedAnchor: {x: -0.12823832, y: 0.48503697}
+  m_ConnectedAnchor: {x: -0.1282382, y: 0.48503697}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4362,7 +4353,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.000000057041603, y: 0.30499998}
-  m_ConnectedAnchor: {x: -0.21900004, y: -0.5410001}
+  m_ConnectedAnchor: {x: -0.21899986, y: -0.5410001}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4408,7 +4399,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.00000009111636, y: -0.000000067245615}
-  m_ConnectedAnchor: {x: 0.029999768, y: -0.5590005}
+  m_ConnectedAnchor: {x: 0.030000007, y: -0.5590005}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4431,7 +4422,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.03799989, y: 0.1390003}
-  m_ConnectedAnchor: {x: -0.000000035390258, y: -0.305}
+  m_ConnectedAnchor: {x: 0.00000020302832, y: -0.305}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
