@@ -113,35 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &250173438 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1291415029487738, guid: c70d604c5cfd81342baa83066f45434d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1268444488}
---- !u!114 &250173439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 250173438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bafe99f2e012c456ea469ee3bf2c79d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodParticlesPrefab: {fileID: 1079602603737598, guid: 635bcd971716f34408836419b37a4826,
-    type: 2}
-  limbs:
-  - name: RArm
-    parentJoint: {fileID: 720577224}
-  - name: LArm
-    parentJoint: {fileID: 1492677182}
-  - name: RLeg
-    parentJoint: {fileID: 1479332259}
-  - name: LLeg
-    parentJoint: {fileID: 1854458005}
-  - name: Head
-    parentJoint: {fileID: 884132723}
 --- !u!1 &278990689
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +302,21 @@ Prefab:
       propertyPath: Right
       value: 275
       objectReference: {fileID: 0}
+    - target: {fileID: 233095812874415146, guid: c70d604c5cfd81342baa83066f45434d,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.000000054538283
+      objectReference: {fileID: 0}
+    - target: {fileID: 233708718274080698, guid: c70d604c5cfd81342baa83066f45434d,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.1282382
+      objectReference: {fileID: 0}
+    - target: {fileID: 233527878209273226, guid: c70d604c5cfd81342baa83066f45434d,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.332726
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70d604c5cfd81342baa83066f45434d, type: 2}
   m_IsPrefabAsset: 0
@@ -411,16 +397,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!233 &720577224 stripped
-HingeJoint2D:
-  m_CorrespondingSourceObject: {fileID: 233696490414653646, guid: c70d604c5cfd81342baa83066f45434d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1268444488}
---- !u!233 &884132723 stripped
-HingeJoint2D:
-  m_CorrespondingSourceObject: {fileID: 233708718274080698, guid: c70d604c5cfd81342baa83066f45434d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1268444488}
 --- !u!1001 &1268444488
 Prefab:
   m_ObjectHideFlags: 0
@@ -464,38 +440,9 @@ Prefab:
       propertyPath: m_Name
       value: RagdollWithUnityPhysics (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 50400934649502304, guid: c70d604c5cfd81342baa83066f45434d,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 50759370111445932, guid: c70d604c5cfd81342baa83066f45434d,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4962178105902304, guid: c70d604c5cfd81342baa83066f45434d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50400934649502304, guid: c70d604c5cfd81342baa83066f45434d,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70d604c5cfd81342baa83066f45434d, type: 2}
   m_IsPrefabAsset: 0
---- !u!233 &1479332259 stripped
-HingeJoint2D:
-  m_CorrespondingSourceObject: {fileID: 233823770327361340, guid: c70d604c5cfd81342baa83066f45434d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1268444488}
---- !u!233 &1492677182 stripped
-HingeJoint2D:
-  m_CorrespondingSourceObject: {fileID: 233527878209273226, guid: c70d604c5cfd81342baa83066f45434d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1268444488}
 --- !u!1 &1557447121
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,8 +544,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!233 &1854458005 stripped
-HingeJoint2D:
-  m_CorrespondingSourceObject: {fileID: 233748961282405866, guid: c70d604c5cfd81342baa83066f45434d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1268444488}
