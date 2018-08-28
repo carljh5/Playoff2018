@@ -7,6 +7,7 @@ using UnityEngine;
 public class LimbManager : MonoBehaviour
 {
     public GameObject bloodParticlesPrefab;
+    private bool hasDetachedHead;
 
     [Serializable]
 	public class Limb {
@@ -16,23 +17,35 @@ public class LimbManager : MonoBehaviour
 
     public List<Limb> limbs = new List<Limb>();
 
-    private void DetachLimb(Limb limb) {
+    public void DetachLimb() {
+        DetachLimb(limbs[0]);
+    }
+
+    public void DetachLimb(Limb limb) {
         //spawn blood particles and child them to the connected rigidbody of the joint at the joints position;
         Instantiate(bloodParticlesPrefab, limb.parentJoint.transform.position, Quaternion.identity, limb.parentJoint.connectedBody.transform);
 
-        if(limb.name.Equals("Head")) {
-            //set the head's rigidbodys freeze y position to false
-            limb.parentJoint.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            //set the body's (the limbs connected rigidbody) rigidbodys freeze y position to false
-            limb.parentJoint.connectedBody.constraints = RigidbodyConstraints2D.None;
-            //Change movement to affect the head
-            gameObject.GetComponent<Movement>().PhysicsBody = limb.parentJoint.gameObject.GetComponent<Rigidbody2D>();
-        }
         //detach by deactivating hingejoint
         limb.parentJoint.enabled = false;
+
+        if (limb.name.Equals("Head")) {
+            if (!hasDetachedHead)
+            {
+                //set the head's rigidbodys freeze y position to false
+                limb.parentJoint.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                //set the body's (the limbs connected rigidbody) rigidbodys freeze y position to false
+                limb.parentJoint.connectedBody.constraints = RigidbodyConstraints2D.None;
+                //Change movement to affect the head
+                gameObject.GetComponent<Movement>().PhysicsBody = limb.parentJoint.gameObject.GetComponent<Rigidbody2D>();
+                hasDetachedHead = true;
+            }
+            return;
+        }
+
         //remove the limb from list to cycle
         limbs.Remove(limb);
     }
+
 
     public void LoseLimb()
     {
@@ -42,6 +55,6 @@ public class LimbManager : MonoBehaviour
 	// Update is called once per frame
     void Update () {
         if (Input.GetKeyDown(KeyCode.Space))
-            DetachLimb(limbs[0]);
+            DetachLimb();
 	}
 }
