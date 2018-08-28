@@ -35,8 +35,6 @@ public class Movement : MonoBehaviour {
 
             currentSpeed *= moveDirectionLeft ? -1 : 1;
 
-            Debug.Log(currentSpeed);
-
             gameObject.transform.Translate(new Vector3(currentSpeed, 0));
         }
     }
