@@ -313,8 +313,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4962178105902304}
   - component: {fileID: 114485133930934798}
-  - component: {fileID: 114370188271294966}
   - component: {fileID: 114929984998919508}
+  - component: {fileID: 114919962093069602}
   m_Layer: 0
   m_Name: RagdollWithUnityPhysics
   m_TagString: Player
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 50823788604994680}
   - component: {fileID: 61052210093018028}
   - component: {fileID: 233423205496616972}
-  - component: {fileID: 114705370978049192}
+  - component: {fileID: 114197666823618208}
   m_Layer: 0
   m_Name: SwordHand
   m_TagString: Player
@@ -2112,6 +2112,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24748087, y: 0.4968972}
   m_EdgeRadius: 0
+--- !u!114 &114197666823618208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762844005608030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053859761ef7c7243a0ca7462284d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponentTag: 
 --- !u!114 &114485133930934798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2153,6 +2165,23 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   PhysicsBody: {fileID: 50400934649502304}
+  Sword: {fileID: 50823788604994680}
+  SwordForce: 1.5
+  direction: -1
+--- !u!114 &114919962093069602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291415029487738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73510ab0d4a4eaf46baef77f7e48cf1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordManager: {fileID: 114197666823618208}
+  Movement: {fileID: 114485133930934798}
+  LimbManager: {fileID: 114929984998919508}
 --- !u!114 &114929984998919508
 MonoBehaviour:
   m_ObjectHideFlags: 1
