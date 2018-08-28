@@ -8,9 +8,21 @@ public class SwordManager : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.relativeVelocity.magnitude < 10)
+            return;
+
+
         Debug.Log(collision.gameObject + ", " + collision.gameObject.tag);
 
-        if(collision.gameObject.CompareTag(opponentTag))
+        if (collision.gameObject.CompareTag(opponentTag))
+        {
+
             GameManager.LoseLimb(opponent);
+        }
+
+        else if (collision.gameObject.CompareTag("Sword"))
+        {
+            SoundManager.PlayHit();
+        }
     }
 }
