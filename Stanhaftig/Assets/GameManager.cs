@@ -37,4 +37,12 @@ public class GameManager : MonoBehaviour {
         else
             Debug.LogWarning("Player " + Player + " does not exist");
     }
+
+    public void StartGame()
+    {
+        if (Input.GetKeyDown("W"))
+        {
+            Instantiate(Player1);
+        }
+    }
 }
