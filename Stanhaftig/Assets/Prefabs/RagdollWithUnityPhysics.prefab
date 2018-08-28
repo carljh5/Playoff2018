@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 4962178105902304}
   - component: {fileID: 114485133930934798}
   - component: {fileID: 114370188271294966}
+  - component: {fileID: 114929984998919508}
   m_Layer: 0
   m_Name: RagdollWithUnityPhysics
   m_TagString: Untagged
@@ -1679,7 +1680,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2161,6 +2162,30 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   PhysicsBody: {fileID: 50400934649502304}
+--- !u!114 &114929984998919508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291415029487738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bafe99f2e012c456ea469ee3bf2c79d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodParticlesPrefab: {fileID: 1079602603737598, guid: 635bcd971716f34408836419b37a4826,
+    type: 2}
+  limbs:
+  - name: RArm
+    parentJoint: {fileID: 233696490414653646}
+  - name: LArm
+    parentJoint: {fileID: 233527878209273226}
+  - name: RLeg
+    parentJoint: {fileID: 233823770327361340}
+  - name: LLeg
+    parentJoint: {fileID: 233748961282405866}
+  - name: Head
+    parentJoint: {fileID: 233708718274080698}
 --- !u!212 &212000639555520704
 SpriteRenderer:
   m_ObjectHideFlags: 1
