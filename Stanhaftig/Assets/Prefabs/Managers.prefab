@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705ec3d8038f4664991fe6493e28d8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FreezeMode: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   SwordForce: 1
