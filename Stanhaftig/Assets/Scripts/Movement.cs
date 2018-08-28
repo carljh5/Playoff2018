@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour {
     private float currentSpeed;
     private bool moveDirectionLeft;
     private float StartMoveTime;
+    public Rigidbody2D PhysicsBody;
+
 
 
     private void Update()
@@ -19,14 +21,11 @@ public class Movement : MonoBehaviour {
         {
             moveDirectionLeft = true;
             StartMoveTime = Time.time;
-            Debug.Log("Going left;");
         }
         else if (Input.GetKeyDown(Right))
         {
             moveDirectionLeft = false;
             StartMoveTime = Time.time;
-
-            Debug.Log("Going Right!!");
         }
 
         if (Input.GetKey(Left) || Input.GetKey(Right))
@@ -35,7 +34,9 @@ public class Movement : MonoBehaviour {
 
             currentSpeed *= moveDirectionLeft ? -1 : 1;
 
-            gameObject.transform.Translate(new Vector3(currentSpeed, 0));
+            var t = PhysicsBody.transform;
+            
+            PhysicsBody.MovePosition( new Vector2(t.position.x+currentSpeed,t.position.y));
         }
     }
     
