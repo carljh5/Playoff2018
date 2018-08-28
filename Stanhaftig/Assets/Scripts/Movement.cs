@@ -19,14 +19,11 @@ public class Movement : MonoBehaviour {
         {
             moveDirectionLeft = true;
             StartMoveTime = Time.time;
-            Debug.Log("Going left;");
         }
         else if (Input.GetKeyDown(Right))
         {
             moveDirectionLeft = false;
             StartMoveTime = Time.time;
-
-            Debug.Log("Going Right!!");
         }
 
         if (Input.GetKey(Left) || Input.GetKey(Right))
