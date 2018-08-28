@@ -953,11 +953,6 @@ Prefab:
       propertyPath: Player2
       value: 
       objectReference: {fileID: 250173439}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: CollisionDelay
-      value: 1.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
   m_IsPrefabAsset: 0
