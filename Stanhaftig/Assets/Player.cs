@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
     public SwordManager swordManager;
     public Movement Movement;
     public LimbManager LimbManager;
+    public GameObject KeyHintCanvas;
 
     private void Start()
     {

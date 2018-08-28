@@ -7,6 +7,10 @@ public class Movement : MonoBehaviour {
     [Header("Key mapping")]
     public KeyCode Left, Right,Hit;
 
+    private Rigidbody2D[] RigidBodies;
+
+    private bool frozen = false;
+
     [Header("Movement")]
     [HideInInspector]
     public float TopSpeed;
@@ -23,8 +27,11 @@ public class Movement : MonoBehaviour {
     [HideInInspector]
     public float SwordForce;
     public int direction;
-    
 
+    private void Start()
+    {
+        RigidBodies = GetComponentsInChildren<Rigidbody2D>();
+    }
 
     private void Update()
     {
@@ -39,7 +46,7 @@ public class Movement : MonoBehaviour {
             StartMoveTime = Time.time;
         }
 
-        if (Input.GetKey(Left) || Input.GetKey(Right))
+        if (!frozen && (Input.GetKey(Left) || Input.GetKey(Right)))
         {
             currentSpeed = AccelarationCurve.Evaluate(Mathf.Clamp((Time.time - StartMoveTime) / SecsUntillTopSpeed, 0, 1)) * TopSpeed;
 
@@ -52,6 +59,17 @@ public class Movement : MonoBehaviour {
 
         if(Input.GetKeyDown(Hit) && Sword)
         {
+            if(GameManager.Freeze())
+            {
+                frozen = !frozen;
+
+                foreach(var rb in RigidBodies)
+                {
+
+                    rb.freezeRotation = frozen;
+                }
+            }
+
             var t = Sword.transform;
 
             //if sword is up hit down and vice versa
