@@ -113,11 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &50366394 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4899262145307908, guid: f1de47b261195469d8ba373b61de8f83,
-    type: 2}
-  m_PrefabInternal: {fileID: 403495282}
 --- !u!1 &64569518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1143641208875738, guid: f6b64bf5a3ee56e49affc0be8d731250,
@@ -857,48 +852,6 @@ Prefab:
       objectReference: {fileID: 126219489}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19f0c5427d048411aa13e843b8eef1a5, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1001 &1362382701
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 50366394}
-    m_Modifications:
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.163
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.6999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.14662585
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.989192
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413815547234940, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9a9397253d9ca8645a8e91e85700e1b4, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1436810135
 Prefab:
