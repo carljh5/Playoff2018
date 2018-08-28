@@ -2148,7 +2148,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  PhysicsBody: {fileID: 0}
+  PhysicsBody: {fileID: 50400934649502304}
 --- !u!212 &212000639555520704
 SpriteRenderer:
   m_ObjectHideFlags: 1
