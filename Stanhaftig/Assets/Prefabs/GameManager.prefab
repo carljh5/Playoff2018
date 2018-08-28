@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4031845833561538}
   - component: {fileID: 114463716595367872}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705ec3d8038f4664991fe6493e28d8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FreezeMode: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   SwordForce: 1
@@ -80,3 +81,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  CollisionDelay: 0.8
+  RestartKey: 112

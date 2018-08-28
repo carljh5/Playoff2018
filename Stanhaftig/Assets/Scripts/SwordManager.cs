@@ -5,7 +5,14 @@ using UnityEngine;
 public class SwordManager : MonoBehaviour {
     public int opponent { get; internal set; }
     public string opponentTag;
+    [HideInInspector] public float CollisionDelay;
     public GameObject sparkleParticlesPrefab;
+
+    public void FixedUpdate()
+    {
+        CollisionDelay -= Time.fixedDeltaTime;
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,8 +22,9 @@ public class SwordManager : MonoBehaviour {
 
         Debug.Log(collision.gameObject + ", " + collision.gameObject.tag);
 
-        if (collision.gameObject.CompareTag(opponentTag))
+        if (collision.gameObject.CompareTag(opponentTag) && CollisionDelay <= 0)
         {
+            CollisionDelay = GameManager.GetCollisionDelay();
 
             GameManager.LoseLimb(opponent);
         }
