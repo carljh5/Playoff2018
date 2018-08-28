@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour {
     private float currentSpeed;
     private bool moveDirectionLeft;
     private float StartMoveTime;
+    public Rigidbody2D PhysicsBody;
+
 
 
     private void Update()
