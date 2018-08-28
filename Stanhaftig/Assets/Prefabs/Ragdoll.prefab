@@ -470,6 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4638032996286920}
   - component: {fileID: 114516600809033160}
+  - component: {fileID: 114429513262678654}
   m_Layer: 0
   m_Name: Ragdoll
   m_TagString: Untagged
@@ -716,7 +717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1686954328576164
 GameObject:
   m_ObjectHideFlags: 1
@@ -1581,7 +1582,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513364699624500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.38, y: -1.4, z: 0}
+  m_LocalPosition: {x: 2.94, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4107146066340548}
@@ -1950,7 +1951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.58640903
+  m_Length: 0.58640885
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4345861398444674}
   m_AttachedIK: {fileID: 0}
@@ -2020,7 +2021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.49785864
+  m_Length: 0.49785876
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4927118443970992}
   m_AttachedIK: {fileID: 0}
@@ -2055,7 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.49655595
+  m_Length: 0.49655607
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4974365576866324}
   m_AttachedIK: {fileID: 0}
@@ -2116,6 +2117,45 @@ MonoBehaviour:
   colliders: []
   threshold: 0.01
   isAnimated: 0
+--- !u!114 &114429513262678654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513364699624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4096a3763abe6419de2a86adf2fa24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Left: 276
+  Right: 275
+  TopSpeed: 0.2
+  SecsUntillTopSpeed: 0.5
+  AccelarationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114430093896621940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2293,7 +2333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5458429
+  m_Length: 0.5458428
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4765559884067652}
   m_AttachedIK: {fileID: 0}
@@ -2363,7 +2403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.52885646
+  m_Length: 0.52885634
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4823562228263810}
   m_AttachedIK: {fileID: 0}
@@ -2379,7 +2419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.49508506
+  m_Length: 0.49508497
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4823083909852000}
   m_AttachedIK: {fileID: 0}
@@ -2414,7 +2454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.6842913
+  m_Length: 0.68429124
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4002328483574304}
   m_AttachedIK: {fileID: 0}
@@ -2430,7 +2470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5546341
+  m_Length: 0.55463403
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4278873528711470}
   m_AttachedIK: {fileID: 0}
@@ -2704,7 +2744,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d03d6e7d29e8195448502a9b920589a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52087d8b9c7e3634ea12eea7132ce866, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4498,7 +4538,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62b418cb5738ec545a750e5dad2959cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfe9470e48bc98d4594a66622ba8e4a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
