@@ -106,7 +106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1141452763564954
 GameObject:
   m_ObjectHideFlags: 1
@@ -471,6 +471,8 @@ GameObject:
   - component: {fileID: 4638032996286920}
   - component: {fileID: 114516600809033160}
   - component: {fileID: 114429513262678654}
+  - component: {fileID: 95890746930763640}
+  - component: {fileID: 114433614145828654}
   m_Layer: 0
   m_Name: Ragdoll
   m_TagString: Untagged
@@ -508,7 +510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1545403515688942
 GameObject:
   m_ObjectHideFlags: 1
@@ -1582,7 +1584,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513364699624500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.94, y: -1.72, z: 0}
+  m_LocalPosition: {x: 0.83, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4107146066340548}
@@ -1939,6 +1941,24 @@ Transform:
   m_Father: {fileID: 4933125233940674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95890746930763640
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513364699624500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1dc7b264894e94080a93101de124256c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114052348876403792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1951,7 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.58640885
+  m_Length: 0.58640903
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4345861398444674}
   m_AttachedIK: {fileID: 0}
@@ -2021,7 +2041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.49785876
+  m_Length: 0.49785867
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4927118443970992}
   m_AttachedIK: {fileID: 0}
@@ -2056,7 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.49655607
+  m_Length: 0.49655595
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4974365576866324}
   m_AttachedIK: {fileID: 0}
@@ -2175,6 +2195,24 @@ MonoBehaviour:
   colliders: []
   threshold: 0.01
   isAnimated: 0
+--- !u!114 &114433614145828654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1513364699624500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c42b9d3909d1410fb98f24c665eee57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limbContainer: {fileID: 1068888066108638, guid: 8342153caf0134cd7871f47a51a90cfe,
+    type: 2}
+  bloodSpatter: {fileID: 1079602603737598, guid: 635bcd971716f34408836419b37a4826,
+    type: 2}
+  detachableLimbs:
+  - name: lArm
+    parentBone: {fileID: 114912963455373350}
 --- !u!114 &114516600809033160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2333,7 +2371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5458428
+  m_Length: 0.5458429
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4765559884067652}
   m_AttachedIK: {fileID: 0}
@@ -2403,7 +2441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.52885634
+  m_Length: 0.5288564
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4823562228263810}
   m_AttachedIK: {fileID: 0}
@@ -2419,7 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.49508497
+  m_Length: 0.49508506
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4823083909852000}
   m_AttachedIK: {fileID: 0}
@@ -2454,7 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.68429124
+  m_Length: 0.6842913
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4002328483574304}
   m_AttachedIK: {fileID: 0}
@@ -2470,7 +2508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.55463403
+  m_Length: 0.5546341
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4278873528711470}
   m_AttachedIK: {fileID: 0}
