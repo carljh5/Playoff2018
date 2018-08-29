@@ -80,7 +80,7 @@ public class Movement : MonoBehaviour {
 
                 player1text.text = "I yield, I yield!";
                 player1text.gameObject.SetActive(true);
-                SoundManager.PlaySpeechPlayer1();
+                SoundManager.PlayCry();
             }
             else
             {
@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour {
 
                 player2text.text = "I yield, I yield!";
                 player2text.gameObject.SetActive(true);
-                SoundManager.PlaySpeechPlayer2();
+                SoundManager.PlayCry();
             }
             StartCoroutine(EndScreenIn3());
             return;
@@ -187,7 +187,11 @@ public class Movement : MonoBehaviour {
     {
         Debug.Log("game Ending");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+
+        SoundManager.PlayLaugh();
+
+        yield return new WaitForSeconds(2f);
 
         Debug.Log("game done");
         GameManager.Endscreen().SetActive(true);

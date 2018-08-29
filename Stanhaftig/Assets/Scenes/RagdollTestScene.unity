@@ -268,6 +268,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 212666256576526192, guid: 4f1cb0a2e6344f845a965dd4f5e4f6c5,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a88d0dc9fbaef64284bea24861cf4e9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f1cb0a2e6344f845a965dd4f5e4f6c5, type: 2}
   m_IsPrefabAsset: 0
@@ -686,6 +692,16 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: bcd2f1061ba6b4c4eb98d656893630fd, type: 3}
+    - target: {fileID: 114229104656063858, guid: e589b209d338a43419b4342b37d800ec,
+        type: 2}
+      propertyPath: Cry
+      value: 
+      objectReference: {fileID: 8300000, guid: 689f9b7aa1f2f084ca0f503a1d94f588, type: 3}
+    - target: {fileID: 114229104656063858, guid: e589b209d338a43419b4342b37d800ec,
+        type: 2}
+      propertyPath: Laugh
+      value: 
+      objectReference: {fileID: 8300000, guid: 880059a7bc8d86b458892040c26fd4de, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e589b209d338a43419b4342b37d800ec, type: 2}
   m_IsPrefabAsset: 0
