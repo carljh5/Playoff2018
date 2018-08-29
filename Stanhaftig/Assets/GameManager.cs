@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     [SerializeField]
     private bool FreezeMode;
+    public ParticleSystem FreezeParticle;
     public Player Player1, Player2;
     private static GameManager instance;
     public float SwordForce;
@@ -94,5 +95,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public static bool Freeze() { return instance.FreezeMode; }
+
+    public static ParticleSystem GetFreezeParticle() { return instance.FreezeParticle; }
 
 }

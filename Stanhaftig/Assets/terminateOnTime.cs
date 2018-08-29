@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class terminateOnTime : MonoBehaviour {
-    
-    
+
+    public float time;
+    public bool destroy;
 
 	void OnEnable()
     {
@@ -13,7 +14,11 @@ public class terminateOnTime : MonoBehaviour {
 
     IEnumerator waitForSeconds()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(time);
         gameObject.SetActive(false);
+        if (destroy) {
+            Destroy(gameObject);
+        }
+        
     }
 }

@@ -63,6 +63,14 @@ public class Movement : MonoBehaviour {
         {
             if(GameManager.Freeze())
             {
+
+                if (!frozen)
+                {
+                    GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, PhysicsBody.transform.position, new Quaternion());
+                    particle.transform.parent = PhysicsBody.gameObject.transform;
+                    SoundManager.PlayFreeze();
+                }
+
                 frozen = !frozen;
 
                 foreach(var rb in RigidBodies)
