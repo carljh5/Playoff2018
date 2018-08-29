@@ -981,13 +981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b12435211e979b49aebd73e6659fc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList: []
-  originalColorList: []
-  frozen:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!1001 &735637024
 Prefab:
   m_ObjectHideFlags: 0
@@ -1616,6 +1609,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.093372785
       objectReference: {fileID: 0}
+    - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
+      propertyPath: m_Name
+      value: Canvas - Press V to Give Up
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
   m_IsPrefabAsset: 0
@@ -1888,7 +1885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
       propertyPath: m_Name
-      value: Canvas - Press P to Give Up
+      value: Canvas - Press L to Give Up
       objectReference: {fileID: 0}
     - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
         type: 2}
