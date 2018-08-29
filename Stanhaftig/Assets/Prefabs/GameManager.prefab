@@ -87,6 +87,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   CollisionDelay: 0.8
   RestartKey: 112
+  EndScreenGameObject: {fileID: 0}
 --- !u!114 &114616477484247446
 MonoBehaviour:
   m_ObjectHideFlags: 1

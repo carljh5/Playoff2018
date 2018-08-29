@@ -178,7 +178,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press P to Give Up
+  m_Text: Press 'T' to Give Up
 --- !u!222 &222586319231830302
 CanvasRenderer:
   m_ObjectHideFlags: 1

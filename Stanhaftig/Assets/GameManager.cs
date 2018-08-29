@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour {
     //to prevent cutting of all the limbs at once
     public float CollisionDelay;
     public KeyCode RestartKey;
+    public GameObject EndScreenGameObject;
+
+    public static GameObject Endscreen()
+    {
+        return instance.EndScreenGameObject;
+    }
 
     public static Transform GetPlayerHeadTransform(bool isPlayer1) {
         if (isPlayer1)
