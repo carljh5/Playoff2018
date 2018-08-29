@@ -92,15 +92,6 @@ public class Movement : MonoBehaviour {
                 rb.constraints = RigidbodyConstraints2D.None;
             }
 
-                if (!frozen)
-                {
-                    GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, PhysicsBody.transform.position, new Quaternion());
-                    particle.transform.parent = PhysicsBody.gameObject.transform;
-                    SoundManager.PlayFreeze();
-                }
-
-                frozen = !frozen;
-
             var jumbBody = HeadMovement ? HeadBody : PhysicsBody;
 
             var t = jumbBody.transform;
@@ -125,8 +116,12 @@ public class Movement : MonoBehaviour {
 
                         rb.freezeRotation = frozen;
                     }
+             
+                GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, PhysicsBody.transform.position, new Quaternion());
+                particle.transform.parent = PhysicsBody.gameObject.transform;
+                SoundManager.PlayFreeze();
 
-                    StartCoroutine(UnfreezeAfterDelay());
+                StartCoroutine(UnfreezeAfterDelay());
                 //}
             }
             else
