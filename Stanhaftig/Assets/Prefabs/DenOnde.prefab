@@ -2306,10 +2306,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Left: 276
   Right: 275
-  Hit: 48
+  Hit: 274
   Jump: 273
+  HeadMovement: 0
+  freezeTime: 1
   TorsoMovement: 0
-  Jumping: 1.5
+  Jumping: 0
   SwordMovement: 1
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
@@ -2338,7 +2340,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   PhysicsBody: {fileID: 50768145749657554}
-  HeadBody: {fileID: 50240525091817564}
+  HeadBody: {fileID: 0}
   Sword: {fileID: 50676663683702972}
   SwordForce: 1
   direction: -1

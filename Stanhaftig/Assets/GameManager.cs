@@ -83,13 +83,13 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame()
     {
-        if (Input.GetKeyDown(Player1.Movement.Hit))
+        if (Input.GetKeyDown(Player1.Movement.Jump))
         {
             Player1.gameObject.SetActive(true);
             Player1.KeyHintCanvas.SetActive(false);
         }
 
-        if (Input.GetKeyDown(Player2.Movement.Hit))
+        if (Input.GetKeyDown(Player2.Movement.Jump))
         {
             Player2.gameObject.SetActive(true);
             Player2.KeyHintCanvas.SetActive(false);
