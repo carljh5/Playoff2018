@@ -55,6 +55,7 @@ MonoBehaviour:
   FreezeMode: 1
   FreezeParticle: {fileID: 198630233830323744, guid: 6fd045ec56fec9b4d93ae3c27e75e1f9,
     type: 2}
+  LivingSwordMode: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   SwordForce: 1
