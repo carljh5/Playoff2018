@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
     
-    public KeyCode Left, Right,Hit, Jump;
+    public KeyCode Left, Right,Hit, Jump, Surrender;
 
     private Rigidbody2D[] RigidBodies;
 
