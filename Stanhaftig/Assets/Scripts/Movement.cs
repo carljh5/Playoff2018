@@ -117,7 +117,9 @@ public class Movement : MonoBehaviour {
                         rb.freezeRotation = frozen;
                     }
              
-                GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, PhysicsBody.transform.position, new Quaternion());
+                GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, 
+                                                            new Vector3(PhysicsBody.transform.position.x, PhysicsBody.transform.position.y, PhysicsBody.transform.position.z -5), 
+                                                            new Quaternion());
                 particle.transform.parent = PhysicsBody.gameObject.transform;
                 SoundManager.PlayFreeze();
 
