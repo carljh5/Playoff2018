@@ -556,8 +556,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FxAudio: {fileID: 82100049167816036}
-  PanLeft: {fileID: 0}
-  PanRight: {fileID: 0}
+  PanLeft: {fileID: 82158883803985678}
+  PanRight: {fileID: 82779508463630400}
   BackgroundAudio: {fileID: 82866586479996218}
   HitAudios:
   - {fileID: 8300000, guid: 7f21a9ffe11989a4086dd9c04dd93b2d, type: 3}
@@ -569,7 +569,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5d5d253f5e9478b4db0e63374ce71365, type: 3}
   - {fileID: 8300000, guid: 4ec063c86fe482840b76cb01296122c8, type: 3}
   - {fileID: 8300000, guid: 2bd2d382caf34264e8c37063636ce5e4, type: 3}
-  YellAudios:
+  YellPlayer1:
+  - {fileID: 8300000, guid: 8918008782b3dc14e8c1d274d19bca49, type: 3}
+  - {fileID: 8300000, guid: 7f2dcd06e4410c94f8d8dadd9ce6f413, type: 3}
+  - {fileID: 8300000, guid: 7a3aa9de8d8bcb643b7a6cec1343fcc0, type: 3}
+  - {fileID: 8300000, guid: 1d89def93bac4d8469707770846b22a7, type: 3}
+  YellPlayer2:
   - {fileID: 8300000, guid: 57c20d951ff931c4d8917beee7970255, type: 3}
   - {fileID: 8300000, guid: f10c2e8d296efc945aee78d6533cbb2a, type: 3}
   - {fileID: 8300000, guid: 4ed1a501e7679cb419b43b95e37903d5, type: 3}

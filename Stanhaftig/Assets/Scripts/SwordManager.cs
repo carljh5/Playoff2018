@@ -53,6 +53,8 @@ public class SwordManager : MonoBehaviour {
         {
             CollisionDelay = GameManager.GetCollisionDelay();
 
+            collision.otherRigidbody.AddForce(collision.relativeVelocity*-1);
+
             GameManager.LoseLimb(opponent);
         }
 

@@ -67,12 +67,14 @@ public class GameManager : MonoBehaviour {
         {
             instance.Player1.LimbManager.LoseLimb();
             TauntManager.PlayTaunt(instance.Player2, instance.Player1);
+            SoundManager.PlayYellPlayer1();
         }
         else if (Player == 2)
         {
 
             instance.Player2.LimbManager.LoseLimb();
             TauntManager.PlayTaunt(instance.Player1, instance.Player2);
+            SoundManager.PlayYellPlayer2();
         }
         else
             Debug.LogWarning("Player " + Player + " does not exist");

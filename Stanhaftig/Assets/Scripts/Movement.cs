@@ -11,6 +11,10 @@ public class Movement : MonoBehaviour {
 
     private bool frozen = false;
 
+    private SpriteRenderer[] spriteList;
+    private Color[] originalColorList;
+    public Color frozenColor;
+
     public bool HeadMovement;
     [HideInInspector]
     public float freezeTime = 1f;
@@ -18,6 +22,9 @@ public class Movement : MonoBehaviour {
     public bool TorsoMovement;
 
     public float Jumping ;
+    public float JumpTime;
+    public AnimationCurve JumpAcceleration;
+
     private float TorsoPositionY, HeadPositionY;
     private bool InTheAir;
 
@@ -50,6 +57,15 @@ public class Movement : MonoBehaviour {
 
         TorsoPositionY = PhysicsBody.position.y;
         HeadPositionY = HeadBody.position.y;
+
+
+        spriteList = GetComponentsInChildren<SpriteRenderer>();
+        originalColorList = new Color[spriteList.Length];
+
+        for (int i = 0; i < spriteList.Length; i++)
+        {
+            originalColorList[i] = spriteList[i].color;
+        }
     }
 
     private void Update()
@@ -94,13 +110,8 @@ public class Movement : MonoBehaviour {
 
             var jumbBody = HeadMovement ? HeadBody : PhysicsBody;
 
-            var t = jumbBody.transform;
-            jumbBody.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -1 : 1), t.position.y + Jumping));
+            StartCoroutine(MoveBodyOverTime(jumbBody, JumpTime));
 
-            // reset freeze position when jump is over. Check if jumping
-            if(!HeadMovement)
-                StartCoroutine(ReFreezeBodyAfterJump());
-            StartCoroutine(ReFreezeHeadAfterJump());
         }
 
         if(Input.GetKeyDown(Hit) && Sword && SwordMovement)
@@ -116,7 +127,14 @@ public class Movement : MonoBehaviour {
 
                         rb.freezeRotation = frozen;
                     }
-             
+
+
+                foreach (SpriteRenderer sprite in spriteList)
+                {
+                    sprite.color = frozenColor;
+                }
+
+
                 GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, 
                                                             new Vector3(PhysicsBody.transform.position.x, PhysicsBody.transform.position.y, PhysicsBody.transform.position.z -5), 
                                                             new Quaternion());
@@ -138,6 +156,32 @@ public class Movement : MonoBehaviour {
         }
     }
 
+    private IEnumerator MoveBodyOverTime(Rigidbody2D body, float secs)
+    {
+        var start = Time.time;
+
+        while(start + secs > Time.time)
+        {
+
+            yield return new WaitForFixedUpdate();
+
+            var t = body.transform;
+
+            var xFactor = JumpAcceleration.Evaluate((Time.time-start)/ (secs));
+
+            //Debug.Log(xFactor);
+
+            body.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -xFactor : xFactor) ,  t.position.y + Jumping * xFactor));
+            
+        }
+
+
+        // reset freeze position when jump is over. Check if jumping
+        if (!HeadMovement)
+            StartCoroutine(ReFreezeBodyAfterJump());
+        StartCoroutine(ReFreezeHeadAfterJump());
+    }
+
     private IEnumerator UnfreezeAfterDelay()
     {
         yield return new WaitForSeconds(freezeTime);
@@ -148,6 +192,11 @@ public class Movement : MonoBehaviour {
         {
 
             rb.freezeRotation = frozen;
+        }
+
+        for (int i = 0; i < spriteList.Length; i++)
+        {
+            spriteList[i].color = originalColorList[i];
         }
 
 
@@ -186,7 +235,7 @@ public class Movement : MonoBehaviour {
     {
         HeadMovement = true;
         TorsoMovement = false;
-        Jumping = 0.5f;
+        Jumping = 0.2f;
     }
 
     internal void StartTorsoMovement()
