@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FreezeMode: 1
+  LivingSwordMode: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   SwordForce: 1
@@ -163,3 +164,15 @@ MonoBehaviour:
     agressorLimbsLeft: 5
     defenderLimbsLeft: 1
     taunt: You yellow bastard!
+  - isAgressor: 1
+    agressorLimbsLeft: 4
+    defenderLimbsLeft: 5
+    taunt: I beat you single-handedly!
+  - isAgressor: 1
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 5
+    taunt: Kiss my feet, peasant!
+  - isAgressor: 1
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 5
+    taunt: Scum!

@@ -19,7 +19,7 @@ public class terminateOnTime : MonoBehaviour {
         if(textMesh == null)
             textMesh = GetComponent<TextMeshPro>();
         StartCoroutine(waitForSeconds());
-        transform.position = playerHead.position + (Vector3.up * 1.5f);
+        //transform.position = playerHead.position + (Vector3.up * 1.5f);
     }
 
     IEnumerator waitForSeconds()
