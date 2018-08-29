@@ -7,6 +7,8 @@ using UnityEngine;
 public class LimbManager : MonoBehaviour
 {
     public GameObject bloodParticlesPrefab;
+    public Canvas giveUpCanvas;
+
     private bool hasDetachedHead;
 
     [HideInInspector]
@@ -54,6 +56,9 @@ public class LimbManager : MonoBehaviour
                 //Change movement to affect the head
                 gameObject.GetComponent<Movement>().PhysicsBody = limb.parentJoint.gameObject.GetComponent<Rigidbody2D>();
                 hasDetachedHead = true;
+
+
+
             }
             return;
         }
