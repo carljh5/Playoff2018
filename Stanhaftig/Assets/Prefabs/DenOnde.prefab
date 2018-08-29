@@ -2265,8 +2265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opponentTag: 
   CollisionDelay: 0
-  sparkleParticlesPrefab: {fileID: 0}
-  SwordTrailParticles: {fileID: 0}
+  sparkleParticlesPrefab: {fileID: 1762360143390192, guid: 91ba5cd3859f94d4cb0ce98ce5bdbd1e,
+    type: 2}
+  SwordTrailParticles: {fileID: 96309094023574952}
   SwingSpeedForSparkles: 0.1
 --- !u!114 &114604970354392094
 MonoBehaviour:
