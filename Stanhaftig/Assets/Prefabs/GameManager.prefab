@@ -103,38 +103,54 @@ MonoBehaviour:
   player1LimbsLeft: 0
   player2LimbsLeft: 0
   agressor: 0
-  player1PossibleTaunts: []
-  player2PossibleTaunts: []
   taunts:
   - isAgressor: 1
     agressorLimbsLeft: 5
     defenderLimbsLeft: 5
+    hasPlayed: 0
+    isPossible: 0
     taunt: Surrender!
   - isAgressor: 1
     agressorLimbsLeft: 5
     defenderLimbsLeft: 2
+    hasPlayed: 0
+    isPossible: 0
     taunt: You got no legs!
   - isAgressor: 0
     agressorLimbsLeft: 5
     defenderLimbsLeft: 4
+    hasPlayed: 0
+    isPossible: 0
     taunt: Tis but a scratch!
   - isAgressor: 0
     agressorLimbsLeft: 5
     defenderLimbsLeft: 4
+    hasPlayed: 0
+    isPossible: 0
     taunt: I've had worse!
   - isAgressor: 1
     agressorLimbsLeft: 5
     defenderLimbsLeft: 4
+    hasPlayed: 0
+    isPossible: 0
     taunt: Had enough yet?
   - isAgressor: 1
     agressorLimbsLeft: 5
     defenderLimbsLeft: 5
+    hasPlayed: 0
+    isPossible: 0
     taunt: I'll cut you like butter!
   - isAgressor: 1
     agressorLimbsLeft: 5
     defenderLimbsLeft: 5
+    hasPlayed: 0
+    isPossible: 0
     taunt: Victory is mine!
   - isAgressor: 0
     agressorLimbsLeft: 5
     defenderLimbsLeft: 1
+    hasPlayed: 0
+    isPossible: 0
     taunt: I am still a-head!
+  player1Taunts: []
+  player2Taunts: []
