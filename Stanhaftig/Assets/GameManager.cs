@@ -57,12 +57,13 @@ public class GameManager : MonoBehaviour {
         if (Player == 1)
         {
             instance.Player1.LimbManager.LoseLimb();
-            TauntManager.PlayTaunt(instance.Player2, instance.Player2);
+            TauntManager.PlayTaunt(instance.Player2, instance.Player1);
         }
         else if (Player == 2)
         {
 
             instance.Player2.LimbManager.LoseLimb();
+            TauntManager.PlayTaunt(instance.Player1, instance.Player2);
         }
         else
             Debug.LogWarning("Player " + Player + " does not exist");
