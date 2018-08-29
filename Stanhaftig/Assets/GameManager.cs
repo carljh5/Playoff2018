@@ -98,4 +98,10 @@ public class GameManager : MonoBehaviour {
     public static bool Freeze() { return instance.FreezeMode; }
 
     public static bool LivingSwordsMode() { return instance.LivingSwordMode; }
+
+    public static bool GameStarted()
+    {
+        return instance.Player1.isActiveAndEnabled && 
+            instance.Player2.isActiveAndEnabled;
+    }
 }
