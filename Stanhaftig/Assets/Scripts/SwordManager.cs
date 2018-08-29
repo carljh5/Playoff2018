@@ -26,7 +26,7 @@ public class SwordManager : MonoBehaviour {
 
         if (Vector2.Distance(transform.position, LastPosistion) > SwingSpeedForSparkles)
         {
-            Debug.Log("Swiing");
+            //Debug.Log("Swiing");
             SwordTrailParticles.gameObject.SetActive(true);
         }
         else
@@ -44,7 +44,7 @@ public class SwordManager : MonoBehaviour {
             return;
 
 
-        Debug.Log(collision.gameObject + ", " + collision.gameObject.tag);
+        //Debug.Log(collision.gameObject + ", " + collision.gameObject.tag);
 
         if (collision.gameObject.CompareTag(opponentTag) && CollisionDelay <= 0)
         {

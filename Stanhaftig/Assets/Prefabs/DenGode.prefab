@@ -1768,7 +1768,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1848,7 +1848,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2265,8 +2265,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Left: 97
   Right: 100
-  Hit: 119
+  Hit: 102
+  Jump: 119
   TorsoMovement: 0
+  Jumping: 1.5
+  SwordMovement: 1
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
   AccelarationCurve:
@@ -2294,6 +2297,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   PhysicsBody: {fileID: 50805217171727390}
+  HeadBody: {fileID: 50238107774805606}
   Sword: {fileID: 50984419433265258}
   SwordForce: 1
   direction: 1
