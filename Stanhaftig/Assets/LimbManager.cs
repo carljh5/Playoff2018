@@ -49,6 +49,7 @@ public class LimbManager : MonoBehaviour
                 //set the body's (the limbs connected rigidbody) rigidbodys freeze y position to false
                 limb.parentJoint.connectedBody.constraints = RigidbodyConstraints2D.None;
                 limb.parentJoint.connectedBody.tag = "Untagged";
+                limb.parentJoint.connectedBody.mass = 0.5f;
 
                 //Change movement to affect the head
                 gameObject.GetComponent<Movement>().PhysicsBody = limb.parentJoint.gameObject.GetComponent<Rigidbody2D>();
@@ -61,6 +62,7 @@ public class LimbManager : MonoBehaviour
         foreach (var l in limb.parentJoint.GetComponentsInChildren<Rigidbody2D>())
         {
             l.tag = "Untagged";
+            l.mass = 0.5f;
         }
 
         //remove the limb from list to cycle
