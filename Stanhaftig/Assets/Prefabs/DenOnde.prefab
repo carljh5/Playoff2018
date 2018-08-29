@@ -2340,7 +2340,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   PhysicsBody: {fileID: 50768145749657554}
-  HeadBody: {fileID: 0}
+  HeadBody: {fileID: 50240525091817564}
   Sword: {fileID: 50676663683702972}
   SwordForce: 1
   direction: -1
