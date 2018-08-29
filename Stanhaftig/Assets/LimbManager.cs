@@ -32,7 +32,13 @@ public class LimbManager : MonoBehaviour
         {
             movement.StartTorsoMovement();
         }
-        else if (limb.name.Equals("Head")) {
+        else if (limb.name.Equals("LArm"))
+        {
+            if(!GameManager.LivingSwordsMode())
+                movement.SwordMovement = false;
+        }
+        else if (limb.name.Equals("Head"))
+        {
             if (!hasDetachedHead)
             {
                 movement.StartHeadMovement();

@@ -14,6 +14,9 @@ public class Movement : MonoBehaviour {
 
     public bool TorsoMovement;
 
+    [HideInInspector]
+    public bool SwordMovement = true;
+
     [Header("Movement")]
     [HideInInspector]
     public float TopSpeed;
@@ -65,7 +68,7 @@ public class Movement : MonoBehaviour {
             PhysicsBody.MovePosition( new Vector2(t.position.x+currentSpeed,t.position.y));
         }
 
-        if(Input.GetKeyDown(Hit) && Sword)
+        if(Input.GetKeyDown(Hit) && Sword && SwordMovement)
         {
             if(GameManager.Freeze())
             {
