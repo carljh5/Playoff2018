@@ -28,6 +28,7 @@ public class LimbManager : MonoBehaviour
         limb.parentJoint.enabled = false;
 
 
+
         if (limb.name.Equals("RLeg")) // No more legs
         {
             movement.StartTorsoMovement();
@@ -47,11 +48,19 @@ public class LimbManager : MonoBehaviour
                 limb.parentJoint.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 //set the body's (the limbs connected rigidbody) rigidbodys freeze y position to false
                 limb.parentJoint.connectedBody.constraints = RigidbodyConstraints2D.None;
+                limb.parentJoint.connectedBody.tag = "Untagged";
+
                 //Change movement to affect the head
                 gameObject.GetComponent<Movement>().PhysicsBody = limb.parentJoint.gameObject.GetComponent<Rigidbody2D>();
                 hasDetachedHead = true;
             }
             return;
+        }
+
+
+        foreach (var l in limb.parentJoint.GetComponentsInChildren<Rigidbody2D>())
+        {
+            l.tag = "Untagged";
         }
 
         //remove the limb from list to cycle

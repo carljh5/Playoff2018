@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4031845833561538}
   - component: {fileID: 114463716595367872}
-  - component: {fileID: 114685979862893288}
+  - component: {fileID: 114616477484247446}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FreezeMode: 1
+  FreezeParticle: {fileID: 198630233830323744, guid: 6fd045ec56fec9b4d93ae3c27e75e1f9,
+    type: 2}
   LivingSwordMode: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
@@ -85,7 +87,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   CollisionDelay: 0.8
   RestartKey: 112
---- !u!114 &114685979862893288
+--- !u!114 &114616477484247446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,9 +106,9 @@ MonoBehaviour:
   player1PossibleTaunts: []
   player2PossibleTaunts: []
   taunts:
-  - isAgressor: 0
+  - isAgressor: 1
     agressorLimbsLeft: 5
-    defenderLimbsLeft: 4
+    defenderLimbsLeft: 5
     taunt: Surrender!
   - isAgressor: 1
     agressorLimbsLeft: 5
@@ -128,51 +130,11 @@ MonoBehaviour:
     agressorLimbsLeft: 5
     defenderLimbsLeft: 5
     taunt: I'll cut you like butter!
-  - isAgressor: 0
+  - isAgressor: 1
     agressorLimbsLeft: 5
-    defenderLimbsLeft: 2
+    defenderLimbsLeft: 5
     taunt: Victory is mine!
   - isAgressor: 0
     agressorLimbsLeft: 5
     defenderLimbsLeft: 1
     taunt: I am still a-head!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 3
-    taunt: It is merely a flesh wound!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 3
-    taunt: You fight with the strength of many men, dear brother!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 2
-    taunt: Stand aside, worthy advesary
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 2
-    taunt: I am invincible!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 1
-    taunt: I'll bite your legs off!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 5
-    taunt: That did not hurt!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 1
-    taunt: You yellow bastard!
-  - isAgressor: 1
-    agressorLimbsLeft: 4
-    defenderLimbsLeft: 5
-    taunt: I beat you single-handedly!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 5
-    taunt: Kiss my feet, peasant!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 5
-    taunt: Scum!
