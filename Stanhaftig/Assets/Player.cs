@@ -10,6 +10,8 @@ public class Player : MonoBehaviour {
 
     private void Start()
     {
+        LimbManager.movement = Movement;
+
 
         if (CompareTag("Player"))
         {

@@ -9,6 +9,9 @@ public class LimbManager : MonoBehaviour
     public GameObject bloodParticlesPrefab;
     private bool hasDetachedHead;
 
+    [HideInInspector]
+    public Movement movement;
+
     [Serializable]
 	public class Limb {
         public string name;
@@ -24,9 +27,22 @@ public class LimbManager : MonoBehaviour
         //detach by deactivating hingejoint
         limb.parentJoint.enabled = false;
 
-        if (limb.name.Equals("Head")) {
+
+        if (limb.name.Equals("RLeg")) // No more legs
+        {
+            movement.StartTorsoMovement();
+        }
+        else if (limb.name.Equals("LArm"))
+        {
+            if(!GameManager.LivingSwordsMode())
+                movement.SwordMovement = false;
+        }
+        else if (limb.name.Equals("Head"))
+        {
             if (!hasDetachedHead)
             {
+                movement.StartHeadMovement();
+
                 //set the head's rigidbodys freeze y position to false
                 limb.parentJoint.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 //set the body's (the limbs connected rigidbody) rigidbodys freeze y position to false

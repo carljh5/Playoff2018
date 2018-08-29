@@ -26,7 +26,7 @@ public class SwordManager : MonoBehaviour {
 
         if (Vector2.Distance(transform.position, LastPosistion) > SwingSpeedForSparkles)
         {
-            Debug.Log("Swiing");
+            //Debug.Log("Swiing");
             SwordTrailParticles.gameObject.SetActive(true);
         }
         else
@@ -44,7 +44,7 @@ public class SwordManager : MonoBehaviour {
             return;
 
 
-        Debug.Log(collision.gameObject + ", " + collision.gameObject.tag);
+        //Debug.Log(collision.gameObject + ", " + collision.gameObject.tag);
 
         if (collision.gameObject.CompareTag(opponentTag) && CollisionDelay <= 0)
         {
@@ -59,6 +59,8 @@ public class SwordManager : MonoBehaviour {
             //spawn blood particles and child them to the connected rigidbody of the joint at the joints position;
             var x = Instantiate(sparkleParticlesPrefab, transform);
             x.transform.position = collision.GetContact(0).point;
+
+
         }
     }
 }
