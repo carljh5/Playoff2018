@@ -7,8 +7,6 @@ using TMPro;
 public class TauntManager : MonoBehaviour {
 
     public static TauntManager instance;
-    //public GameObject player1TextPrefab;
-   // public GameObject player2TextPrefab;
 
     public TextMeshPro player1text;
     public TextMeshPro player2text;
@@ -24,39 +22,73 @@ public class TauntManager : MonoBehaviour {
     }
     public Agressor agressor;
 
-    public List<string> player1PossibleTaunts = new List<string>();
-
-    public List<string> player2PossibleTaunts = new List<string>();
 
     [Serializable]
     public class Taunt
     {
+        //State requirements
         public bool isAgressor;
         [Range(1,5)]
         public int agressorLimbsLeft = 5;
         [Range(1, 5)]
         public int defenderLimbsLeft = 5;
+
+
+        //state of taunt
+       //[HideInInspector]
+        public bool hasPlayed;
+       // [HideInInspector]
+        public bool isPossible;
+
+        //the taunt string
         public string taunt;
+
+        public Taunt(bool isAgressor, int agressorLimbsLeft, int defenderLimbsLeft, bool hasPlayed, bool isPossible, string taunt) {
+            this.isAgressor = isAgressor;
+            this.agressorLimbsLeft = agressorLimbsLeft;
+            this.defenderLimbsLeft = defenderLimbsLeft;
+            this.hasPlayed = hasPlayed;
+            this.isPossible = isPossible;
+            this.taunt = taunt;
+        }
+
+        public Taunt Clone() {
+            return new Taunt(isAgressor, agressorLimbsLeft, defenderLimbsLeft, hasPlayed, isPossible, taunt);
+        }
     }
 
     public List<Taunt> taunts = new List<Taunt>();
+
+    //Make copies for each player
+   public List<Taunt> player1Taunts = new List<Taunt>();
+   public List<Taunt> player2Taunts = new List<Taunt>();
+
+
+
+
+
+
+
+
+
+   // public List<string> player1PossibleTaunts = new List<string>();
+   // public List<string> player2PossibleTaunts = new List<string>();
 
     private void Start()
     {
         if(instance == null)
             instance = this;
-        //GameObject player1Prefab = Instantiate(player1TextPrefab);
-        //player1Prefab.GetComponent<terminateOnTime>().
-        //Instantiate(player2TextPrefab);
 
-        //instance.player1text = player1TextPrefab.GetComponent<TextMeshPro>();
-        //instance.player2text = player2TextPrefab.GetComponent<TextMeshPro>();
+        foreach(Taunt t in taunts) {
+            player1Taunts.Add(t.Clone());
+            player2Taunts.Add(t.Clone());
+        }
     }
-
 
 
     public static void PlayTaunt(Player attacker, Player defender)
     {
+        //Update state;
         instance.agressor = attacker.CompareTag("Player") ? Agressor.player1 : Agressor.player2;
         instance.player1LimbsLeft = attacker.CompareTag("Player") ? attacker.LimbManager.limbs.Count: defender.LimbManager.limbs.Count;
         if(attacker.CompareTag("Player")) {
@@ -70,16 +102,10 @@ public class TauntManager : MonoBehaviour {
         }
 
         //instance.player1PossibleTaunts.Clear();
-       //instance.player2PossibleTaunts.Clear();
-
-        //if(instance.player1PossibleTaunts.Count == 0 || instance.player2PossibleTaunts.Count == 0) {
-        //    instance.player1PossibleTaunts.Clear();
-        //    instance.player2PossibleTaunts.Clear();
-        //} else {
-        //    return;
-        //}
+        //instance.player2PossibleTaunts.Clear();
 
 
+        //update state of taunts for each player;
         foreach (Taunt t in instance.taunts)
         {
             if (instance.agressor == Agressor.player1)
@@ -87,9 +113,15 @@ public class TauntManager : MonoBehaviour {
                 if (instance.player1LimbsLeft <= t.agressorLimbsLeft && instance.player2LimbsLeft <= t.defenderLimbsLeft)
                 {
                     if (t.isAgressor)
-                        instance.player1PossibleTaunts.Add(t.taunt);
+                    {
+                        instance.player1Taunts[instance.taunts.IndexOf(t)].isPossible = true;
+                        //instance.player1PossibleTaunts.Add(t.taunt);
+                    }
                     else
-                        instance.player2PossibleTaunts.Add(t.taunt);
+                    {
+                        instance.player2Taunts[instance.taunts.IndexOf(t)].isPossible = true;
+                        //instance.player2PossibleTaunts.Add(t.taunt);
+                    }
 
                 }
             }
@@ -98,9 +130,15 @@ public class TauntManager : MonoBehaviour {
                 if (instance.player2LimbsLeft <= t.agressorLimbsLeft && instance.player1LimbsLeft <= t.defenderLimbsLeft)
                 {
                     if (t.isAgressor)
-                        instance.player2PossibleTaunts.Add(t.taunt);
+                    {
+                        instance.player2Taunts[instance.taunts.IndexOf(t)].isPossible = true;
+                        //instance.player1PossibleTaunts.Add(t.taunt);
+                    }
                     else
-                        instance.player1PossibleTaunts.Add(t.taunt);
+                    {
+                        instance.player1Taunts[instance.taunts.IndexOf(t)].isPossible = true;
+                        //instance.player2PossibleTaunts.Add(t.taunt);
+                    }
                 }
             }
         }
@@ -109,7 +147,33 @@ public class TauntManager : MonoBehaviour {
     }
 
 
-
+    private Taunt GetPossibleTauntThatHasNotPlayed(List<Taunt> ts) {
+        List<Taunt> possibleTaunts = new List<Taunt>();
+        foreach(Taunt t in ts) {
+            if(t.isPossible && !t.hasPlayed) {
+                possibleTaunts.Add(t);
+               // t.hasPlayed = true;
+                //return t;
+            }
+        }
+        if(possibleTaunts.Count > 0) {
+            Taunt temp = possibleTaunts[UnityEngine.Random.Range(0, possibleTaunts.Count-1)];
+            temp.hasPlayed = true;
+            return temp;
+        }
+        //Reset all possible taunts so they can play again;
+        foreach(Taunt t in ts) {
+            if (t.isPossible)
+            {
+                t.hasPlayed = false;
+                possibleTaunts.Add(t);
+            }
+        }
+        Taunt returnTaunt = possibleTaunts[UnityEngine.Random.Range(0, possibleTaunts.Count - 1)];
+        returnTaunt.hasPlayed = true;
+        return returnTaunt;
+        
+    }
 
     public IEnumerator TauntSequence() {
         float time = 0;
@@ -123,15 +187,17 @@ public class TauntManager : MonoBehaviour {
             else
             {
                 if(taunter == Agressor.player1) {
-                    string taunt = player1PossibleTaunts[UnityEngine.Random.Range(0, player1PossibleTaunts.Count - 1)];
-                    player1text.text = taunt;
-                    player1PossibleTaunts.Remove(taunt);
+                    //string taunt = player1PossibleTaunts[UnityEngine.Random.Range(0, player1PossibleTaunts.Count - 1)];
+                    //player1text.text = taunt;
+                    player1text.text = instance.GetPossibleTauntThatHasNotPlayed(player1Taunts).taunt;
+                   // player1PossibleTaunts.Remove(taunt);
                     player1text.gameObject.SetActive(true);
                     taunter = Agressor.player2;
                 } else {
-                    string taunt = player2PossibleTaunts[UnityEngine.Random.Range(0, player2PossibleTaunts.Count - 1)];
-                    player2text.text = taunt;
-                    player2PossibleTaunts.Remove(taunt);
+                    //string taunt = player2PossibleTaunts[UnityEngine.Random.Range(0, player2PossibleTaunts.Count - 1)];
+                    //player2text.text = taunt;
+                    //player2PossibleTaunts.Remove(taunt);
+                    player2text.text = instance.GetPossibleTauntThatHasNotPlayed(player2Taunts).taunt;
                     player2text.gameObject.SetActive(true);
                     taunter = Agressor.player1;
                 }
