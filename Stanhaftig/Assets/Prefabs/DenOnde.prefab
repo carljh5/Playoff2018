@@ -2314,6 +2314,30 @@ MonoBehaviour:
   TorsoMovement: 0
   Jumping: 0.3
   JumpTime: 0.5
+  JumpAcceleration:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.016666412
+      value: 0.95625305
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.96250004
+      value: 0.012500107
+      inSlope: -0.18749954
+      outSlope: -0.18749954
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.27234054
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   SwordMovement: 1
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
