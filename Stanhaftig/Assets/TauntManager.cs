@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class TauntManager : MonoBehaviour {
 
     public static TauntManager instance;
-    public Text player1text;
-    public Text player2text;
+    public TextMeshPro player1text;
+    public TextMeshPro player2text;
+
 
     public int player1LimbsLeft;
     public int player2LimbsLeft;
@@ -94,18 +96,18 @@ public class TauntManager : MonoBehaviour {
         if (instance.agressor == Agressor.player1)
         {
             player1text.text = player1PossibleTaunts[UnityEngine.Random.Range(0, player1PossibleTaunts.Count - 1)];
-            player1text.transform.parent.gameObject.SetActive(true);
+            player1text.gameObject.SetActive(true);
             yield return new WaitForSeconds(2f);
             player2text.text = player2PossibleTaunts[UnityEngine.Random.Range(0, player2PossibleTaunts.Count - 1)];
-            player2text.transform.parent.gameObject.SetActive(true);
+            player2text.gameObject.SetActive(true);
         }
         else
         {
             player2text.text = player2PossibleTaunts[UnityEngine.Random.Range(0, player2PossibleTaunts.Count - 1)];
-            player2text.transform.parent.gameObject.SetActive(true);
+            player2text.gameObject.SetActive(true);
             yield return new WaitForSeconds(2f);
             player1text.text = player1PossibleTaunts[UnityEngine.Random.Range(0, player1PossibleTaunts.Count - 1)];
-            player1text.transform.parent.gameObject.SetActive(true);
+            player1text.gameObject.SetActive(true);
         }
     }
 
