@@ -11,6 +11,10 @@ public class Movement : MonoBehaviour {
 
     private bool frozen = false;
 
+    private SpriteRenderer[] spriteList;
+    private Color[] originalColorList;
+    public Color frozenColor;
+
     public bool HeadMovement;
     [HideInInspector]
     public float freezeTime = 1f;
@@ -50,6 +54,15 @@ public class Movement : MonoBehaviour {
 
         TorsoPositionY = PhysicsBody.position.y;
         HeadPositionY = HeadBody.position.y;
+
+
+        spriteList = GetComponentsInChildren<SpriteRenderer>();
+        originalColorList = new Color[spriteList.Length];
+
+        for (int i = 0; i < spriteList.Length; i++)
+        {
+            originalColorList[i] = spriteList[i].color;
+        }
     }
 
     private void Update()
@@ -116,7 +129,14 @@ public class Movement : MonoBehaviour {
 
                         rb.freezeRotation = frozen;
                     }
-             
+
+
+                foreach (SpriteRenderer sprite in spriteList)
+                {
+                    sprite.color = frozenColor;
+                }
+
+
                 GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, 
                                                             new Vector3(PhysicsBody.transform.position.x, PhysicsBody.transform.position.y, PhysicsBody.transform.position.z -5), 
                                                             new Quaternion());
@@ -148,6 +168,11 @@ public class Movement : MonoBehaviour {
         {
 
             rb.freezeRotation = frozen;
+        }
+
+        for (int i = 0; i < spriteList.Length; i++)
+        {
+            spriteList[i].color = originalColorList[i];
         }
 
 
