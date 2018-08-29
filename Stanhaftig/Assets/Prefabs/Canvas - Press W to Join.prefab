@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 223073285490115906}
   - component: {fileID: 114703418209655256}
   - component: {fileID: 114152750988373468}
+  - component: {fileID: 95955649708742052}
   m_Layer: 5
   m_Name: Canvas - Press W to Join
   m_TagString: Untagged
@@ -63,6 +64,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95955649708742052
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143641208875738}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111e7d4cea350e2488eb6087b7027a1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114152750988373468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +166,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 75361c92e8db79b4787e356c78b79c36, type: 3}
+    m_Font: {fileID: 12800000, guid: 0e9b936a2b0ccc849a0449eb7de7b55e, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
@@ -229,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -11.22, y: -3}
+  m_AnchoredPosition: {x: -8.4, y: -3}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224388451152867526
