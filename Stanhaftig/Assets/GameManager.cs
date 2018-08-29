@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour {
     public float CollisionDelay;
     public KeyCode RestartKey;
 
+    public static Transform GetPlayerHeadTransform(bool isPlayer1) {
+        if (isPlayer1)
+            return instance.Player1.Movement.HeadBody.transform;
+        return instance.Player2.Movement.HeadBody.transform;
+    }
+
     private void Start()
     {
         if (!instance)

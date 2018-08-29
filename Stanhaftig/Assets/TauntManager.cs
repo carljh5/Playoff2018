@@ -35,9 +35,9 @@ public class TauntManager : MonoBehaviour {
 
 
         //state of taunt
-       //[HideInInspector]
+       [HideInInspector]
         public bool hasPlayed;
-       // [HideInInspector]
+        [HideInInspector]
         public bool isPossible;
 
         //the taunt string
@@ -66,14 +66,6 @@ public class TauntManager : MonoBehaviour {
 
 
 
-
-
-
-
-
-   // public List<string> player1PossibleTaunts = new List<string>();
-   // public List<string> player2PossibleTaunts = new List<string>();
-
     private void Start()
     {
         if(instance == null)
@@ -91,18 +83,18 @@ public class TauntManager : MonoBehaviour {
         //Update state;
         instance.agressor = attacker.CompareTag("Player") ? Agressor.player1 : Agressor.player2;
         instance.player1LimbsLeft = attacker.CompareTag("Player") ? attacker.LimbManager.limbs.Count: defender.LimbManager.limbs.Count;
-        if(attacker.CompareTag("Player")) {
+        if (attacker.CompareTag("Player"))
+        {
             instance.agressor = Agressor.player1;
             instance.player1LimbsLeft = attacker.LimbManager.limbs.Count;
             instance.player2LimbsLeft = defender.LimbManager.limbs.Count;
-        }  else {
+        }
+        else
+        {
             instance.agressor = Agressor.player2;
             instance.player1LimbsLeft = defender.LimbManager.limbs.Count;
             instance.player2LimbsLeft = attacker.LimbManager.limbs.Count;
         }
-
-        //instance.player1PossibleTaunts.Clear();
-        //instance.player2PossibleTaunts.Clear();
 
 
         //update state of taunts for each player;
@@ -115,12 +107,10 @@ public class TauntManager : MonoBehaviour {
                     if (t.isAgressor)
                     {
                         instance.player1Taunts[instance.taunts.IndexOf(t)].isPossible = true;
-                        //instance.player1PossibleTaunts.Add(t.taunt);
                     }
                     else
                     {
                         instance.player2Taunts[instance.taunts.IndexOf(t)].isPossible = true;
-                        //instance.player2PossibleTaunts.Add(t.taunt);
                     }
 
                 }
@@ -132,12 +122,10 @@ public class TauntManager : MonoBehaviour {
                     if (t.isAgressor)
                     {
                         instance.player2Taunts[instance.taunts.IndexOf(t)].isPossible = true;
-                        //instance.player1PossibleTaunts.Add(t.taunt);
                     }
                     else
                     {
                         instance.player1Taunts[instance.taunts.IndexOf(t)].isPossible = true;
-                        //instance.player2PossibleTaunts.Add(t.taunt);
                     }
                 }
             }
@@ -152,8 +140,7 @@ public class TauntManager : MonoBehaviour {
         foreach(Taunt t in ts) {
             if(t.isPossible && !t.hasPlayed) {
                 possibleTaunts.Add(t);
-               // t.hasPlayed = true;
-                //return t;
+               
             }
         }
         if(possibleTaunts.Count > 0) {
@@ -187,16 +174,10 @@ public class TauntManager : MonoBehaviour {
             else
             {
                 if(taunter == Agressor.player1) {
-                    //string taunt = player1PossibleTaunts[UnityEngine.Random.Range(0, player1PossibleTaunts.Count - 1)];
-                    //player1text.text = taunt;
                     player1text.text = instance.GetPossibleTauntThatHasNotPlayed(player1Taunts).taunt;
-                   // player1PossibleTaunts.Remove(taunt);
                     player1text.gameObject.SetActive(true);
                     taunter = Agressor.player2;
                 } else {
-                    //string taunt = player2PossibleTaunts[UnityEngine.Random.Range(0, player2PossibleTaunts.Count - 1)];
-                    //player2text.text = taunt;
-                    //player2PossibleTaunts.Remove(taunt);
                     player2text.text = instance.GetPossibleTauntThatHasNotPlayed(player2Taunts).taunt;
                     player2text.gameObject.SetActive(true);
                     taunter = Agressor.player1;

@@ -4,8 +4,8 @@ using UnityEngine;
 using TMPro;
 
 public class PlayerTextBubbleBehaviour : MonoBehaviour {
-
-    public Transform playerHead;
+    public bool isPlayer1;
+    private Transform playerHead;
 
     TextMeshPro textMesh;
 
@@ -13,12 +13,16 @@ public class PlayerTextBubbleBehaviour : MonoBehaviour {
     {
         if (textMesh == null)
             textMesh = GetComponent<TextMeshPro>();
+        if (playerHead == null)
+            playerHead = GameManager.GetPlayerHeadTransform(isPlayer1);
     }
 
     void OnEnable()
     {
         if (textMesh == null)
             textMesh = GetComponent<TextMeshPro>();
+        if (playerHead == null)
+            playerHead = GameManager.GetPlayerHeadTransform(isPlayer1);
         StartCoroutine(waitForSeconds());
         //transform.position = playerHead.position + (Vector3.up * 1.5f);
     }
