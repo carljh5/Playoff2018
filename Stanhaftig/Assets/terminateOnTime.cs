@@ -7,10 +7,11 @@ public class terminateOnTime : MonoBehaviour {
     public Transform playerHead;
     
     TextMeshPro textMesh;
-
-    private void Start()
     public bool destroy;
     public float time;
+
+
+    private void Start()
     {
         if (textMesh == null)
             textMesh = GetComponent<TextMeshPro>();
