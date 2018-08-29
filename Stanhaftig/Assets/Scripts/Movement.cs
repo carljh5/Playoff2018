@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour {
     public bool TorsoMovement;
 
     public float Jumping ;
+    public float JumpTime;
     private float TorsoPositionY, HeadPositionY;
     private bool InTheAir;
 
@@ -94,13 +95,8 @@ public class Movement : MonoBehaviour {
 
             var jumbBody = HeadMovement ? HeadBody : PhysicsBody;
 
-            var t = jumbBody.transform;
-            jumbBody.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -1 : 1), t.position.y + Jumping));
+            StartCoroutine(MoveBodyOverTime(jumbBody, JumpTime));
 
-            // reset freeze position when jump is over. Check if jumping
-            if(!HeadMovement)
-                StartCoroutine(ReFreezeBodyAfterJump());
-            StartCoroutine(ReFreezeHeadAfterJump());
         }
 
         if(Input.GetKeyDown(Hit) && Sword && SwordMovement)
@@ -136,6 +132,28 @@ public class Movement : MonoBehaviour {
                 Sword.MovePosition(new Vector2(t.position.x + SwordForce * direction, t.position.y + SwordForce));
             }
         }
+    }
+
+    private IEnumerator MoveBodyOverTime(Rigidbody2D body, float secs)
+    {
+        var start = Time.time;
+
+        while(start + secs > Time.time)
+        {
+
+            yield return new WaitForFixedUpdate();
+
+            var t = body.transform;
+
+            body.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -1 : 1),  t.position.y + Jumping));
+            
+        }
+
+
+        // reset freeze position when jump is over. Check if jumping
+        if (!HeadMovement)
+            StartCoroutine(ReFreezeBodyAfterJump());
+        StartCoroutine(ReFreezeHeadAfterJump());
     }
 
     private IEnumerator UnfreezeAfterDelay()
