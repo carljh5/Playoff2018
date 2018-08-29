@@ -177,10 +177,12 @@ public class TauntManager : MonoBehaviour {
                     player1text.text = instance.GetPossibleTauntThatHasNotPlayed(player1Taunts).taunt;
                     player1text.gameObject.SetActive(true);
                     taunter = Agressor.player2;
+                    SoundManager.PlaySpeechPlayer1();
                 } else {
                     player2text.text = instance.GetPossibleTauntThatHasNotPlayed(player2Taunts).taunt;
                     player2text.gameObject.SetActive(true);
                     taunter = Agressor.player1;
+                    SoundManager.PlaySpeechPlayer2();
                 }
                 time = 0;
 
