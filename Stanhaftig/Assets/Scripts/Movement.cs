@@ -90,11 +90,14 @@ public class Movement : MonoBehaviour {
                 rb.constraints = RigidbodyConstraints2D.None;
             }
 
-            var t = PhysicsBody.transform;
-            PhysicsBody.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -1 : 1), t.position.y + Jumping));
+            var jumbBody = HeadMovement ? HeadBody : PhysicsBody;
+
+            var t = jumbBody.transform;
+            jumbBody.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -1 : 1), t.position.y + Jumping));
 
             // reset freeze position when jump is over. Check if jumping
-            StartCoroutine(ReFreezeBodyAfterJump());
+            if(!HeadMovement)
+                StartCoroutine(ReFreezeBodyAfterJump());
             StartCoroutine(ReFreezeHeadAfterJump());
         }
 
@@ -124,11 +127,12 @@ public class Movement : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.2f);
 
-        yield return new WaitUntil(() => HeadBody.position.y <= HeadPositionY && !InTheAir);
+        yield return new WaitUntil(() => HeadBody.position.y <= HeadPositionY && (HeadMovement || !InTheAir));
         
-        HeadBody.constraints = RigidbodyConstraints2D.FreezePositionY;
+        if(!HeadMovement)
+            HeadBody.constraints = RigidbodyConstraints2D.FreezePositionY;
 
-        Debug.Log("ReFreeze Head");
+        InTheAir = false;
 
     }
     IEnumerator ReFreezeBodyAfterJump()
@@ -152,7 +156,7 @@ public class Movement : MonoBehaviour {
     {
         HeadMovement = true;
         TorsoMovement = false;
-        Jumping = 0.01f;
+        Jumping = 0.5f;
     }
 
     internal void StartTorsoMovement()
