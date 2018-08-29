@@ -7,10 +7,34 @@ public class SwordManager : MonoBehaviour {
     public string opponentTag;
     [HideInInspector] public float CollisionDelay;
     public GameObject sparkleParticlesPrefab;
+    public TrailRenderer SwordTrailParticles;
+    private Vector2 LastPosistion;
+    public float SwingSpeedForSparkles = 5;
+
+    private void Start()
+    {
+        if(!SwordTrailParticles)
+        {
+            SwordTrailParticles = GetComponentInChildren<TrailRenderer>();
+        }
+
+    }
 
     public void FixedUpdate()
     {
         CollisionDelay -= Time.fixedDeltaTime;
+
+        if (Vector2.Distance(transform.position, LastPosistion) > SwingSpeedForSparkles)
+        {
+            Debug.Log("Swiing");
+            SwordTrailParticles.gameObject.SetActive(true);
+        }
+        else
+            SwordTrailParticles.gameObject.SetActive(false);
+
+        LastPosistion = transform.position;
+
+       
     }
 
 

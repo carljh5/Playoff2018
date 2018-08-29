@@ -2323,8 +2323,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opponentTag: 
-  sparkleParticlesPrefab: {fileID: 1762360143390192, guid: 91ba5cd3859f94d4cb0ce98ce5bdbd1e,
-    type: 2}
+  CollisionDelay: 0
+  sparkleParticlesPrefab: {fileID: 0}
+  SwordTrailParticles: {fileID: 0}
+  SwingSpeedForSparkles: 0.1
 --- !u!114 &114920868342709242
 MonoBehaviour:
   m_ObjectHideFlags: 1
