@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
     
-    public KeyCode Left, Right,Hit, Jump;
+    public KeyCode Left, Right,Hit, Jump, Surrender;
 
     private Rigidbody2D[] RigidBodies;
 
@@ -248,7 +248,7 @@ public class Movement : MonoBehaviour {
 
     internal void StartTorsoMovement()
     {
-        Jumping = 0;
+        Jumping = 0.08f;
         TorsoMovement = true;
         foreach (var rb in RigidBodies)
         {
