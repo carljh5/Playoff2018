@@ -19,8 +19,6 @@ public class RemoveOnStart : MonoBehaviour {
         {
             yield return null;
             GroupToFade.alpha = Mathf.Lerp(0, 1, (t- Time.time)/Delay);
-            Debug.Log(Mathf.Lerp(t, start, Time.time));
-            
         }
 
         Destroy(gameObject);
