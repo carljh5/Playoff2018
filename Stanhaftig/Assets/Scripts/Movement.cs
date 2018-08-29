@@ -169,7 +169,7 @@ public class Movement : MonoBehaviour {
 
             var xFactor = JumpAcceleration.Evaluate((Time.time-start)/ (secs));
 
-            Debug.Log(xFactor);
+            //Debug.Log(xFactor);
 
             body.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -xFactor : xFactor) ,  t.position.y + Jumping * xFactor));
             
