@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     [SerializeField]
     private bool FreezeMode;
+    public ParticleSystem FreezeParticle;
     [SerializeField]
     private bool LivingSwordMode;
     public Player Player1, Player2;
@@ -82,13 +83,13 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame()
     {
-        if (Input.GetKeyDown(Player1.Movement.Hit))
+        if (Input.GetKeyDown(Player1.Movement.Jump))
         {
             Player1.gameObject.SetActive(true);
             Player1.KeyHintCanvas.SetActive(false);
         }
 
-        if (Input.GetKeyDown(Player2.Movement.Hit))
+        if (Input.GetKeyDown(Player2.Movement.Jump))
         {
             Player2.gameObject.SetActive(true);
             Player2.KeyHintCanvas.SetActive(false);
@@ -98,6 +99,8 @@ public class GameManager : MonoBehaviour {
     public static bool Freeze() { return instance.FreezeMode; }
 
     public static bool LivingSwordsMode() { return instance.LivingSwordMode; }
+    public static ParticleSystem GetFreezeParticle() { return instance.FreezeParticle; }
+
 
     public static bool GameStarted()
     {

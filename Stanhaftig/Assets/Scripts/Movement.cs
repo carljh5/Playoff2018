@@ -116,8 +116,12 @@ public class Movement : MonoBehaviour {
 
                         rb.freezeRotation = frozen;
                     }
+             
+                GameObject particle = Instantiate(GameManager.GetFreezeParticle().gameObject, PhysicsBody.transform.position, new Quaternion());
+                particle.transform.parent = PhysicsBody.gameObject.transform;
+                SoundManager.PlayFreeze();
 
-                    StartCoroutine(UnfreezeAfterDelay());
+                StartCoroutine(UnfreezeAfterDelay());
                 //}
             }
             else

@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip[] YellAudios;
     public AudioClip[] SpeechAudios;
     public AudioClip WinMusic;
+    public AudioClip[] FreezeAudio;
     int lastSpeech;
 
 
@@ -51,6 +52,12 @@ public class SoundManager : MonoBehaviour {
     {
         if (instance.WinMusic && instance.FxAudio)
             instance.FxAudio.PlayOneShot(instance.WinMusic);
+    }
+
+    public static void PlayFreeze()
+    {
+        if (instance.FreezeAudio.Length > 0 && instance.FxAudio)
+            instance.FxAudio.PlayOneShot(instance.FreezeAudio[Random.Range(0, instance.FreezeAudio.Length)]);
     }
 
     public int RandomRangeExcept(int min, int max, int except)

@@ -324,3 +324,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3d7d769920695e043804d37090b5ae47, type: 3}
   - {fileID: 8300000, guid: a689834addc38ee49872fe88dd374ed0, type: 3}
   WinMusic: {fileID: 8300000, guid: 7ca73b4391d34ae4fb9e1bab369250b6, type: 3}
+  FreezeAudio:
+  - {fileID: 8300000, guid: 029ed995a7d750b4fb03880078920c22, type: 3}

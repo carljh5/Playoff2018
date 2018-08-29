@@ -2265,12 +2265,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Left: 97
   Right: 100
-  Hit: 102
+  Hit: 115
   Jump: 119
   HeadMovement: 0
-  freezeTime: 2
+  freezeTime: 1
   TorsoMovement: 0
-  Jumping: 1.5
+  Jumping: 0
   SwordMovement: 1
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
@@ -2331,8 +2331,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opponentTag: 
   CollisionDelay: 0
-  sparkleParticlesPrefab: {fileID: 0}
-  SwordTrailParticles: {fileID: 0}
+  sparkleParticlesPrefab: {fileID: 1762360143390192, guid: 91ba5cd3859f94d4cb0ce98ce5bdbd1e,
+    type: 2}
+  SwordTrailParticles: {fileID: 96772631116957806}
   SwingSpeedForSparkles: 0.1
 --- !u!114 &114920868342709242
 MonoBehaviour:
