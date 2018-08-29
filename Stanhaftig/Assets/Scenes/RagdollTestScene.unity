@@ -622,6 +622,11 @@ Prefab:
       propertyPath: frozenColor.r
       value: 0.83137256
       objectReference: {fileID: 0}
+    - target: {fileID: 114920868342709242, guid: f1de47b261195469d8ba373b61de8f83,
+        type: 2}
+      propertyPath: giveUpCanvas
+      value: 
+      objectReference: {fileID: 1447603518}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1de47b261195469d8ba373b61de8f83, type: 2}
   m_IsPrefabAsset: 0
@@ -1432,6 +1437,11 @@ Prefab:
       propertyPath: frozenColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114604970354392094, guid: 19f0c5427d048411aa13e843b8eef1a5,
+        type: 2}
+      propertyPath: giveUpCanvas
+      value: 
+      objectReference: {fileID: 1884844826}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19f0c5427d048411aa13e843b8eef1a5, type: 2}
   m_IsPrefabAsset: 0
@@ -1594,28 +1604,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224518767702286814, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.14150599
-      objectReference: {fileID: 0}
-    - target: {fileID: 224518767702286814, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 224518767702286814, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.093372785
-      objectReference: {fileID: 0}
     - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
       propertyPath: m_Name
       value: Canvas - Press V to Give Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!223 &1447603518 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 223520409123183932, guid: 1524a9624ff56284a875feb23475c8f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1447603517}
 --- !u!1 &1557447121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,33 +1872,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224518767702286814, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.14150599
-      objectReference: {fileID: 0}
-    - target: {fileID: 224518767702286814, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 224518767702286814, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.093372785
-      objectReference: {fileID: 0}
     - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
       propertyPath: m_Name
       value: Canvas - Press L to Give Up
       objectReference: {fileID: 0}
-    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
-        type: 2}
-      propertyPath: m_Text
-      value: Press P to Give Up
+    - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!223 &1884844826 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 223520409123183932, guid: 1524a9624ff56284a875feb23475c8f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1884844825}
 --- !u!1 &1940540736
 GameObject:
   m_ObjectHideFlags: 0
