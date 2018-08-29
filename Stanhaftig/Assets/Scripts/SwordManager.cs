@@ -10,9 +10,12 @@ public class SwordManager : MonoBehaviour {
     public TrailRenderer SwordTrailParticles;
     private Vector2 LastPosistion;
     public float SwingSpeedForSparkles = 0.1f;
+    private Rigidbody2D SwordBody;
 
     private void Start()
     {
+        SwordBody = GetComponent<Rigidbody2D>();
+
         if(!SwordTrailParticles)
         {
             SwordTrailParticles = GetComponentInChildren<TrailRenderer>();
@@ -60,7 +63,7 @@ public class SwordManager : MonoBehaviour {
             var x = Instantiate(sparkleParticlesPrefab, transform);
             x.transform.position = collision.GetContact(0).point;
 
-
+            SwordBody.MovePosition(collision.relativeVelocity * 0.2f);
         }
     }
 }
