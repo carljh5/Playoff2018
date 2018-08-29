@@ -20,9 +20,21 @@ public class LimbManager : MonoBehaviour
         public HingeJoint2D parentJoint;
 	}
 
+    public GameObject equipment;
+    private bool isEquipmentDetached;
+    public SpriteRenderer spriteToToggleOnOnEquipmentLost;
+
     public List<Limb> limbs = new List<Limb>();
 
     public void DetachLimb(Limb limb) {
+        if(!isEquipmentDetached) {
+            equipment.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            equipment.GetComponent<CapsuleCollider2D>().enabled = true;
+            if(spriteToToggleOnOnEquipmentLost != null)
+                spriteToToggleOnOnEquipmentLost.enabled = true;
+            isEquipmentDetached = true;
+            return;
+        }
         //spawn blood particles and child them to the connected rigidbody of the joint at the joints position;
         Instantiate(bloodParticlesPrefab, limb.parentJoint.transform.position, Quaternion.identity, limb.parentJoint.connectedBody.transform);
 
