@@ -33,6 +33,9 @@ public class LimbManager : MonoBehaviour
 
         if (limb.name.Equals("RLeg")) // No more legs
         {
+            giveUpCanvas.gameObject.SetActive(true);
+
+
             movement.StartTorsoMovement();
         }
         else if (limb.name.Equals("LArm"))

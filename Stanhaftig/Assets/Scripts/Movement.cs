@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour {
     private Rigidbody2D[] RigidBodies;
 
     private bool frozen = false;
+    private bool freezeAvailable = true;
 
     private SpriteRenderer[] spriteList;
     private Color[] originalColorList;
@@ -18,6 +19,7 @@ public class Movement : MonoBehaviour {
     public bool HeadMovement;
     [HideInInspector]
     public float freezeTime = 1f;
+    public float freezeCoolDown = 1f;
 
     public bool TorsoMovement;
 
@@ -114,13 +116,14 @@ public class Movement : MonoBehaviour {
 
         }
 
-        if(Input.GetKeyDown(Hit) && Sword && SwordMovement)
+        if(Input.GetKeyDown(Hit) && Sword && SwordMovement && freezeAvailable)
         {
             if (GameManager.Freeze())
             {
                 //if (!frozen)
                 //{
                     frozen = true;
+                    freezeAvailable = false;
 
                     foreach (var rb in RigidBodies)
                     {
@@ -186,6 +189,7 @@ public class Movement : MonoBehaviour {
     {
         yield return new WaitForSeconds(freezeTime);
 
+
         frozen = false;
 
         foreach (var rb in RigidBodies)
@@ -199,6 +203,9 @@ public class Movement : MonoBehaviour {
             spriteList[i].color = originalColorList[i];
         }
 
+        yield return new WaitForSeconds(freezeCoolDown);
+
+        freezeAvailable = true;
 
     }
 
