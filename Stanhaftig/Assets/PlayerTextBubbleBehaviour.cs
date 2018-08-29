@@ -24,7 +24,7 @@ public class PlayerTextBubbleBehaviour : MonoBehaviour {
         if (playerHead == null)
             playerHead = GameManager.GetPlayerHeadTransform(isPlayer1);
         StartCoroutine(waitForSeconds());
-        //transform.position = playerHead.position + (Vector3.up * 1.5f);
+        transform.position = playerHead.position + (Vector3.up * 1.5f);
     }
 
     IEnumerator waitForSeconds()

@@ -2270,7 +2270,7 @@ MonoBehaviour:
   HeadMovement: 0
   freezeTime: 1
   TorsoMovement: 0
-  Jumping: 0
+  Jumping: 2.5
   SwordMovement: 1
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
