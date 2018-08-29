@@ -31,6 +31,8 @@ public class Movement : MonoBehaviour {
     private void Start()
     {
         RigidBodies = GetComponentsInChildren<Rigidbody2D>();
+
+        direction = ((int)transform.localScale.x) * -1;
     }
 
     private void Update()

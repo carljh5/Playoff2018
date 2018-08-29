@@ -2343,12 +2343,12 @@ MonoBehaviour:
   limbs:
   - name: RArm
     parentJoint: {fileID: 233572219904041910}
-  - name: LArm
-    parentJoint: {fileID: 233133490729315240}
-  - name: RLeg
-    parentJoint: {fileID: 233095222361074172}
   - name: LLeg
     parentJoint: {fileID: 233832598350015392}
+  - name: RLeg
+    parentJoint: {fileID: 233095222361074172}
+  - name: LArm
+    parentJoint: {fileID: 233133490729315240}
   - name: Head
     parentJoint: {fileID: 233276223008963738}
 --- !u!212 &212004196863960026
