@@ -898,10 +898,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1806808056151926, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
     - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
         type: 2}
       propertyPath: Player1
@@ -912,6 +908,16 @@ Prefab:
       propertyPath: Player2
       value: 
       objectReference: {fileID: 250173439}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: player1text
+      value: 
+      objectReference: {fileID: 1250455799}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: player2text
+      value: 
+      objectReference: {fileID: 1940281159}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
   m_IsPrefabAsset: 0
@@ -1058,62 +1064,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f1cb0a2e6344f845a965dd4f5e4f6c5, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1667922665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1806808056151926, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-    type: 2}
-  m_PrefabInternal: {fileID: 1436810135}
---- !u!114 &1667922666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667922665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c935d7a57f16c4244a2140a96936e1fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1text: {fileID: 1250455799}
-  player2text: {fileID: 1940281159}
-  player1LimbsLeft: 0
-  player2LimbsLeft: 0
-  agressor: 0
-  player1PossibleTaunts: []
-  player2PossibleTaunts: []
-  taunts:
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 5
-    taunt: Surrender!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 2
-    taunt: You got no legs!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 4
-    taunt: Tis but a scratch!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 4
-    taunt: I've had worse!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 4
-    taunt: Had enough yet?
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 5
-    taunt: I'll cut you like butter!
-  - isAgressor: 1
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 5
-    taunt: Victory is mine!
-  - isAgressor: 0
-    agressorLimbsLeft: 5
-    defenderLimbsLeft: 1
-    taunt: I am still a-head!
 --- !u!114 &1940281159 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114885588188563680, guid: ee2629e3693e5294fbae8b3780da22da,
