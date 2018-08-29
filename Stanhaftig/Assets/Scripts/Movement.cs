@@ -179,7 +179,8 @@ public class Movement : MonoBehaviour {
         // reset freeze position when jump is over. Check if jumping
         if (!HeadMovement)
             StartCoroutine(ReFreezeBodyAfterJump());
-        StartCoroutine(ReFreezeHeadAfterJump());
+        else
+            StartCoroutine(ReFreezeHeadAfterJump());
     }
 
     private IEnumerator UnfreezeAfterDelay()
