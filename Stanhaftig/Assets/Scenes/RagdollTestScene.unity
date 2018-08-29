@@ -810,21 +810,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224698221950906986, guid: 55b312e41f713c441803935547f38662,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224698221950906986, guid: 55b312e41f713c441803935547f38662,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224698221950906986, guid: 55b312e41f713c441803935547f38662,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b312e41f713c441803935547f38662, type: 2}
   m_IsPrefabAsset: 0
@@ -1072,6 +1057,38 @@ Prefab:
     - target: {fileID: 4917557932190288, guid: ffe18812417184936a3197adce2ab9a7, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648980983910132, guid: ffe18812417184936a3197adce2ab9a7,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fcd09597615bdb949bb87e8e0a0b05a3,
+        type: 2}
+    - target: {fileID: 114648980983910132, guid: ffe18812417184936a3197adce2ab9a7,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648980983910132, guid: ffe18812417184936a3197adce2ab9a7,
+        type: 2}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957251438848272, guid: ffe18812417184936a3197adce2ab9a7,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fcd09597615bdb949bb87e8e0a0b05a3,
+        type: 2}
+    - target: {fileID: 114957251438848272, guid: ffe18812417184936a3197adce2ab9a7,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957251438848272, guid: ffe18812417184936a3197adce2ab9a7,
+        type: 2}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe18812417184936a3197adce2ab9a7, type: 2}
@@ -1353,6 +1370,21 @@ Prefab:
       propertyPath: m_Name
       value: Canvas - Press V to Give Up
       objectReference: {fileID: 0}
+    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.6405188
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -1620,6 +1652,21 @@ Prefab:
     - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
       propertyPath: m_Name
       value: Canvas - Press L to Give Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.6405188
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593957228191816, guid: 1524a9624ff56284a875feb23475c8f3,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1851126649222308, guid: 1524a9624ff56284a875feb23475c8f3, type: 2}
       propertyPath: m_IsActive
