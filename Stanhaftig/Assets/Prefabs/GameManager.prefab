@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4031845833561538}
   - component: {fileID: 114463716595367872}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,3 +82,4 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   CollisionDelay: 0.8
+  RestartKey: 112

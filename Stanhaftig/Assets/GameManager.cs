@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     [SerializeField]
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public AnimationCurve AccelarationCurve;
     //to prevent cutting of all the limbs at once
     public float CollisionDelay;
+    public KeyCode RestartKey;
 
     private void Start()
     {
@@ -69,7 +71,11 @@ public class GameManager : MonoBehaviour {
     void Update()
     {
         StartGame();
+
+        if (Input.GetKeyDown(RestartKey))
+            SceneManager.LoadScene(Application.loadedLevel);
     }
+    
 
     public void StartGame()
     {
