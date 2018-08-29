@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 212181833094104130}
   - component: {fileID: 70101400337716484}
   - component: {fileID: 50397958840373872}
+  - component: {fileID: 233460944569964460}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 233511042794238306}
   m_Layer: 0
   m_Name: R_underLeg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +124,7 @@ GameObject:
   - component: {fileID: 233653364153391732}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   - component: {fileID: 4779912250339724}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +155,7 @@ GameObject:
   - component: {fileID: 212858322308092434}
   m_Layer: 0
   m_Name: R_Shoulder
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +171,7 @@ GameObject:
   - component: {fileID: 212201068305075270}
   m_Layer: 0
   m_Name: L_Shoulder
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,7 +219,7 @@ GameObject:
   - component: {fileID: 212840946922309968}
   m_Layer: 0
   m_Name: L_Arm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +237,7 @@ GameObject:
   - component: {fileID: 233644132854384602}
   m_Layer: 0
   m_Name: RLowerArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +317,7 @@ GameObject:
   - component: {fileID: 4613891060450244}
   m_Layer: 0
   m_Name: BURLY-MAN_1_swordsman_model
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +415,7 @@ GameObject:
   - component: {fileID: 233093471072877380}
   m_Layer: 0
   m_Name: LeftUnderarm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,7 +433,7 @@ GameObject:
   - component: {fileID: 233512549856707944}
   m_Layer: 0
   m_Name: LeftLeg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -542,7 +543,7 @@ GameObject:
   - component: {fileID: 4363374428875130}
   m_Layer: 0
   m_Name: RHandBone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,7 +561,7 @@ GameObject:
   - component: {fileID: 233498938249606364}
   m_Layer: 0
   m_Name: L_Underleg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +643,7 @@ GameObject:
   - component: {fileID: 233885918023060874}
   m_Layer: 0
   m_Name: LeftArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,7 +706,7 @@ GameObject:
   - component: {fileID: 212714271128212798}
   m_Layer: 0
   m_Name: L_Arm_wear
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -740,7 +741,7 @@ GameObject:
   - component: {fileID: 233048513990735294}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,6 +778,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1684349701241364
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4657212652403566}
+  - component: {fileID: 50171032197077030}
+  m_Layer: 0
+  m_Name: Stick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1700319952520034
 GameObject:
   m_ObjectHideFlags: 1
@@ -837,7 +854,7 @@ GameObject:
   - component: {fileID: 233759977306789438}
   m_Layer: 0
   m_Name: RightLeg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,7 +886,7 @@ GameObject:
   - component: {fileID: 212817165600555964}
   m_Layer: 0
   m_Name: L_Leg
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,7 +904,7 @@ GameObject:
   - component: {fileID: 233473376068255718}
   m_Layer: 0
   m_Name: RightArm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,7 +920,7 @@ GameObject:
   - component: {fileID: 212778812638184602}
   m_Layer: 0
   m_Name: R_Thigh
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,7 +938,7 @@ GameObject:
   - component: {fileID: 114410348902872712}
   m_Layer: 0
   m_Name: DenNyeFrie
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,7 +954,7 @@ GameObject:
   - component: {fileID: 212839291085662902}
   m_Layer: 0
   m_Name: R_Leg
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,7 +970,7 @@ GameObject:
   - component: {fileID: 212672576130478550}
   m_Layer: 0
   m_Name: L_Thigh
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1609,6 +1626,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4657212652403566}
   - {fileID: 4779912250339724}
   m_Father: {fileID: 4201463982852012}
   m_RootOrder: 0
@@ -1637,6 +1655,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4521472109610814}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4657212652403566
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684349701241364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4613891060450244}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4664802351233388
@@ -1725,7 +1756,7 @@ Transform:
   - {fileID: 4771962213490208}
   - {fileID: 4135411005213150}
   m_Father: {fileID: 4613891060450244}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4791590984157366
 Transform:
@@ -1900,7 +1931,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1929,6 +1960,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!50 &50171032197077030
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684349701241364}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!50 &50237593448769810
 Rigidbody2D:
   serializedVersion: 4
@@ -1940,7 +1991,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1956,19 +2007,19 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010320821133888}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!50 &50486324901324898
 Rigidbody2D:
   serializedVersion: 4
@@ -2020,7 +2071,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2040,7 +2091,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2080,7 +2131,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2271,7 +2322,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026042335, y: -0.39063692}
+  m_Offset: {x: 0.026042335, y: -0.35321802}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2282,7 +2333,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.099675134, y: 0.36754036}
+  m_Size: {x: 0.099675134, y: 0.44237816}
   m_EdgeRadius: 0
 --- !u!61 &61962101531006538
 BoxCollider2D:
@@ -2491,15 +2542,15 @@ MonoBehaviour:
   movement: {fileID: 0}
   limbs:
   - name: RArm
-    parentJoint: {fileID: 0}
+    parentJoint: {fileID: 233885918023060874}
   - name: LLeg
-    parentJoint: {fileID: 0}
+    parentJoint: {fileID: 233759977306789438}
   - name: RLeg
-    parentJoint: {fileID: 0}
+    parentJoint: {fileID: 233512549856707944}
   - name: LArm
-    parentJoint: {fileID: 0}
+    parentJoint: {fileID: 233473376068255718}
   - name: Head
-    parentJoint: {fileID: 0}
+    parentJoint: {fileID: 233048513990735294}
 --- !u!114 &114410348902872712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2526,19 +2577,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4096a3763abe6419de2a86adf2fa24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: 276
-  Right: 275
-  Hit: 274
-  Jump: 273
+  Left: 97
+  Right: 100
+  Hit: 102
+  Jump: 119
   frozenColor: {r: 0, g: 0, b: 0, a: 0}
   HeadMovement: 0
   freezeTime: 1
   TorsoMovement: 0
-  Jumping: 2.5
-  JumpTime: 0
+  Jumping: 0.3
+  JumpTime: 0.5
   JumpAcceleration:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041656494
+      value: 0.9937439
+      inSlope: -0.13105418
+      outSlope: -0.13105418
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.42738533
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -2569,11 +2638,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  PhysicsBody: {fileID: 0}
-  HeadBody: {fileID: 0}
-  Sword: {fileID: 0}
+  PhysicsBody: {fileID: 50397958840373872}
+  HeadBody: {fileID: 50168450396025936}
+  Sword: {fileID: 50822744340746122}
   SwordForce: 1
-  direction: -1
+  direction: 1
 --- !u!114 &114621060114786716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4623,7 +4692,7 @@ HingeJoint2D:
   m_GameObject: {fileID: 1663043782715538}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 50397958840373872}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -4661,6 +4730,29 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 120
+--- !u!233 &233460944569964460
+HingeJoint2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010320821133888}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 50171032197077030}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -0.63, y: 0}
+  m_ConnectedAnchor: {x: -0.066809624, y: -0.051644802}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 1
+  m_AngleLimits:
+    m_LowerAngle: -30
+    m_UpperAngle: 30
 --- !u!233 &233473376068255718
 HingeJoint2D:
   m_ObjectHideFlags: 1
@@ -4766,15 +4858,15 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.04, y: -0.1964377}
-  m_ConnectedAnchor: {x: 0.039999943, y: -0.19643767}
+  m_Anchor: {x: 0.040000018, y: -0.078835495}
+  m_ConnectedAnchor: {x: 0.039999947, y: -0.078835465}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -160
+    m_LowerAngle: -100
     m_UpperAngle: 5
 --- !u!233 &233653364153391732
 HingeJoint2D:

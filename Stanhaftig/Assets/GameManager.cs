@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour {
 
     void Update()
     {
-        StartGame();
+        if(!GameStarted())
+            StartGame();
 
         if (Input.GetKeyDown(RestartKey))
             SceneManager.LoadScene(Application.loadedLevel);
@@ -99,7 +100,8 @@ public class GameManager : MonoBehaviour {
                 SoundManager.PlayYellPlayer1();
             }
             Player1.gameObject.SetActive(true);
-            Player1.KeyHintCanvas.SetActive(false);
+            if(Player1.KeyHintCanvas)
+                Player1.KeyHintCanvas.SetActive(false);
         }
 
         if (Input.GetKeyDown(Player2.Movement.Jump))
