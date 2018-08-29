@@ -151,7 +151,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 400
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3547,7 +3547,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
     collisionMode: 1
@@ -3618,7 +3618,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 1
-      minScalar: 0.3
+      minScalar: 0.6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3669,8 +3669,8 @@ ParticleSystem:
         m_RotationOrder: 4
     m_EnergyLossOnCollision:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.8
+      minMaxState: 0
+      scalar: 0
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -3727,7 +3727,7 @@ ParticleSystem:
       serializedVersion: 2
       m_Bits: 4294967295
     maxCollisionShapes: 256
-    quality: 0
+    quality: 1
     voxelSize: 0.5
     collisionMessages: 0
     collidesWithDynamic: 1
@@ -8225,7 +8225,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
+      scalar: 0.2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -8278,7 +8278,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -8360,7 +8360,7 @@ ParticleSystem:
     - serializedVersion: 2
       emitter: {fileID: 198717807797575696}
       type: 1
-      properties: 0
+      properties: -1
   LightsModule:
     enabled: 0
     ratio: 0
