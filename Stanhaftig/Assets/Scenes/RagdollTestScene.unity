@@ -118,11 +118,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1143641208875738, guid: f6b64bf5a3ee56e49affc0be8d731250,
     type: 2}
   m_PrefabInternal: {fileID: 159557753}
---- !u!82 &120576934 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 82158883803985678, guid: e589b209d338a43419b4342b37d800ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 735637024}
 --- !u!1 &126219489 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1608652623984122, guid: f6945f6a936dc0a43b5c2d6f88bf17b0,
@@ -586,11 +581,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b312e41f713c441803935547f38662, type: 2}
   m_IsPrefabAsset: 0
---- !u!82 &482344217 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 82779508463630400, guid: e589b209d338a43419b4342b37d800ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 735637024}
 --- !u!1001 &579837850
 Prefab:
   m_ObjectHideFlags: 0
@@ -778,16 +768,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114229104656063858, guid: e589b209d338a43419b4342b37d800ec,
-        type: 2}
-      propertyPath: PanLeft
-      value: 
-      objectReference: {fileID: 120576934}
-    - target: {fileID: 114229104656063858, guid: e589b209d338a43419b4342b37d800ec,
-        type: 2}
-      propertyPath: PanRight
-      value: 
-      objectReference: {fileID: 482344217}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e589b209d338a43419b4342b37d800ec, type: 2}
   m_IsPrefabAsset: 0

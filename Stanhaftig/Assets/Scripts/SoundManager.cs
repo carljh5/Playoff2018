@@ -10,7 +10,8 @@ public class SoundManager : MonoBehaviour {
     private static SoundManager instance;
     public AudioClip[] HitAudios;
     public AudioClip[] BloodAudios;
-    public AudioClip[] YellAudios;
+    public AudioClip[] YellPlayer1;
+    public AudioClip[] YellPlayer2;
     public AudioClip[] SpeechYellPlayer1;
     public AudioClip[] SpeechYellPlayer2;
     public AudioClip WinMusic;
@@ -37,10 +38,16 @@ public class SoundManager : MonoBehaviour {
             instance.FxAudio.PlayOneShot(instance.BloodAudios[Random.Range(0, instance.BloodAudios.Length)]);
     }
 
-    public static void PlayYell()
+    public static void PlayYellPlayer1()
     {
-        if (instance.YellAudios.Length > 0 && instance.PanRight)
-            instance.PanRight.PlayOneShot(instance.YellAudios[Random.Range(0, instance.YellAudios.Length)]);
+        if (instance.YellPlayer1.Length > 0 && instance.PanLeft)
+            instance.PanLeft.PlayOneShot(instance.YellPlayer1[Random.Range(0, instance.YellPlayer1.Length)]);
+    }
+
+    public static void PlayYellPlayer2()
+    {
+        if (instance.YellPlayer2.Length > 0 && instance.PanRight)
+            instance.PanRight.PlayOneShot(instance.YellPlayer2[Random.Range(0, instance.YellPlayer2.Length)]);
     }
 
     public static void PlaySpeechPlayer1()
@@ -53,9 +60,9 @@ public class SoundManager : MonoBehaviour {
 
     public static void PlaySpeechPlayer2()
     {
-        if (instance.SpeechYellPlayer2.Length > 0 && instance.FxAudio)
+        if (instance.SpeechYellPlayer2.Length > 0 && instance.PanRight)
 
-            instance.FxAudio.PlayOneShot(instance.SpeechYellPlayer2[instance.lastSpeech]);
+            instance.PanRight.PlayOneShot(instance.SpeechYellPlayer2[instance.lastSpeech]);
         instance.lastSpeech = instance.RandomRangeExcept(0, instance.SpeechYellPlayer2.Length, instance.lastSpeech);
     }
 
