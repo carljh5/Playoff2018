@@ -29,7 +29,6 @@ public class SpeechScript : MonoBehaviour
 
     public void Speak()
     {
-        SoundManager.PlaySpeech();
         SpeechBubble.SetActive(true);
         m_Text.text = RandomTaunts[Random.Range(0, RandomTaunts.Length)];
     }

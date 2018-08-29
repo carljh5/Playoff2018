@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
     public AudioSource FxAudio;
+    public AudioSource PanLeft;
+    public AudioSource PanRight;
     public AudioSource BackgroundAudio;
     private static SoundManager instance;
     public AudioClip[] HitAudios;
     public AudioClip[] BloodAudios;
     public AudioClip[] YellAudios;
-    public AudioClip[] SpeechAudios;
+    public AudioClip[] SpeechYellPlayer1;
+    public AudioClip[] SpeechYellPlayer2;
     public AudioClip WinMusic;
     public AudioClip[] FreezeAudio;
     int lastSpeech;
@@ -36,16 +39,24 @@ public class SoundManager : MonoBehaviour {
 
     public static void PlayYell()
     {
-        if (instance.YellAudios.Length > 0 && instance.FxAudio)
-            instance.FxAudio.PlayOneShot(instance.YellAudios[Random.Range(0, instance.YellAudios.Length)]);
+        if (instance.YellAudios.Length > 0 && instance.PanRight)
+            instance.PanRight.PlayOneShot(instance.YellAudios[Random.Range(0, instance.YellAudios.Length)]);
     }
 
-    public static void PlaySpeech()
+    public static void PlaySpeechPlayer1()
     {
-        if (instance.SpeechAudios.Length > 0 && instance.FxAudio)
+        if (instance.SpeechYellPlayer1.Length > 0 && instance.PanLeft)
             
-            instance.FxAudio.PlayOneShot(instance.SpeechAudios[instance.lastSpeech]);
-            instance.lastSpeech = instance.RandomRangeExcept(0, instance.SpeechAudios.Length, instance.lastSpeech);
+            instance.PanLeft.PlayOneShot(instance.SpeechYellPlayer1[instance.lastSpeech]);
+            instance.lastSpeech = instance.RandomRangeExcept(0, instance.SpeechYellPlayer1.Length, instance.lastSpeech);
+    }
+
+    public static void PlaySpeechPlayer2()
+    {
+        if (instance.SpeechYellPlayer2.Length > 0 && instance.FxAudio)
+
+            instance.FxAudio.PlayOneShot(instance.SpeechYellPlayer2[instance.lastSpeech]);
+        instance.lastSpeech = instance.RandomRangeExcept(0, instance.SpeechYellPlayer2.Length, instance.lastSpeech);
     }
 
     public static void PlayWin()
