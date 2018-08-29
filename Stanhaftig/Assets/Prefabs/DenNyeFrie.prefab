@@ -2667,13 +2667,13 @@ MonoBehaviour:
   Right: 100
   Hit: 102
   Jump: 119
-  Surrender: 0
+  Surrender: 116
   frozenColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   HeadMovement: 0
   freezeTime: 1
   freezeCoolDown: 1
   TorsoMovement: 0
-  Jumping: 0.5
+  Jumping: 0.9
   JumpTime: 0.7
   JumpAcceleration:
     serializedVersion: 2
