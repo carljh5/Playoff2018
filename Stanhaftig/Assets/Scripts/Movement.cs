@@ -11,7 +11,9 @@ public class Movement : MonoBehaviour {
 
     private bool frozen = false;
 
-    public bool HeadMovement { get; private set; }
+    public bool HeadMovement;
+    [HideInInspector]
+    public float freezeTime = 1f;
 
     public bool TorsoMovement;
 
@@ -103,24 +105,46 @@ public class Movement : MonoBehaviour {
 
         if(Input.GetKeyDown(Hit) && Sword && SwordMovement)
         {
-            if(GameManager.Freeze())
+            if (GameManager.Freeze())
             {
-                frozen = !frozen;
+                //if (!frozen)
+                //{
+                    frozen = true;
 
-                foreach(var rb in RigidBodies)
-                {
+                    foreach (var rb in RigidBodies)
+                    {
 
-                    rb.freezeRotation = frozen;
-                }
+                        rb.freezeRotation = frozen;
+                    }
+
+                    StartCoroutine(UnfreezeAfterDelay());
+                //}
             }
+            else
+            {
+                var t = Sword.transform;
 
-            var t = Sword.transform;
+                //if sword is up hit down and vice versa
+                var x = t.rotation.z > 0 ? SwordForce : -SwordForce;
 
-            //if sword is up hit down and vice versa
-            var x = t.rotation.z > 0 ? SwordForce : -SwordForce;
-
-            Sword.MovePosition(new Vector2(t.position.x+SwordForce*direction , t.position.y + SwordForce));
+                Sword.MovePosition(new Vector2(t.position.x + SwordForce * direction, t.position.y + SwordForce));
+            }
         }
+    }
+
+    private IEnumerator UnfreezeAfterDelay()
+    {
+        yield return new WaitForSeconds(freezeTime);
+
+        frozen = false;
+
+        foreach (var rb in RigidBodies)
+        {
+
+            rb.freezeRotation = frozen;
+        }
+
+
     }
 
     IEnumerator ReFreezeHeadAfterJump()
