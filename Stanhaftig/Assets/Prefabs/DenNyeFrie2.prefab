@@ -2077,7 +2077,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!50 &50555045445012146
 Rigidbody2D:
   serializedVersion: 4
@@ -2553,13 +2553,14 @@ MonoBehaviour:
   Right: 275
   Hit: 108
   Jump: 273
+  Surrender: 107
   frozenColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   HeadMovement: 0
   freezeTime: 1
   freezeCoolDown: 1
   TorsoMovement: 0
-  Jumping: 0.5
-  JumpTime: 0.5
+  Jumping: 0.9
+  JumpTime: 0.7
   JumpAcceleration:
     serializedVersion: 2
     m_Curve:

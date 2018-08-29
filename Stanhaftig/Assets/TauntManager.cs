@@ -22,6 +22,15 @@ public class TauntManager : MonoBehaviour {
     }
     public Agressor agressor;
 
+    public static TextMeshPro GetPlayer1Text()
+    {
+        return instance.player1text;
+    }
+    public static TextMeshPro GetPlayer2Text()
+    {
+        return instance.player2text;
+    }
+
 
     [Serializable]
     public class Taunt

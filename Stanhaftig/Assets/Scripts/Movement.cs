@@ -72,6 +72,30 @@ public class Movement : MonoBehaviour {
 
     private void Update()
     {
+        if (Input.GetKeyDown(Surrender))
+        {
+            if (gameObject.CompareTag("Player"))
+            {
+                var player1text = TauntManager.GetPlayer1Text();
+
+                player1text.text = "I yield, I yield!";
+                player1text.gameObject.SetActive(true);
+                SoundManager.PlaySpeechPlayer1();
+            }
+            else
+            {
+                var player2text = TauntManager.GetPlayer2Text();
+
+                player2text.text = "I yield, I yield!";
+                player2text.gameObject.SetActive(true);
+                SoundManager.PlaySpeechPlayer2();
+            }
+            StartCoroutine(EndScreenIn3());
+            return;
+
+        }
+
+
         if(Input.GetKeyDown(Left))
         {
             moveDirectionLeft = true;
@@ -157,6 +181,16 @@ public class Movement : MonoBehaviour {
                 Sword.MovePosition(new Vector2(t.position.x + SwordForce * direction, t.position.y + SwordForce));
             }
         }
+    }
+
+    private IEnumerator EndScreenIn3()
+    {
+        Debug.Log("game Ending");
+
+        yield return new WaitForSeconds(3f);
+
+        Debug.Log("game done");
+        GameManager.Endscreen().SetActive(true);
     }
 
     private IEnumerator MoveBodyOverTime(Rigidbody2D body, float secs)
