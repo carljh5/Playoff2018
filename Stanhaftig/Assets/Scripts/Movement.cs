@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class Movement : MonoBehaviour {
     private Rigidbody2D[] RigidBodies;
 
     private bool frozen = false;
+
+    public bool TorsoMovement;
+
+    [HideInInspector]
+    public bool SwordMovement = true;
 
     [Header("Movement")]
     [HideInInspector]
@@ -31,6 +37,8 @@ public class Movement : MonoBehaviour {
     private void Start()
     {
         RigidBodies = GetComponentsInChildren<Rigidbody2D>();
+
+        direction = ((int)transform.localScale.x) * -1;
     }
 
     private void Update()
@@ -52,12 +60,15 @@ public class Movement : MonoBehaviour {
 
             currentSpeed *= moveDirectionLeft ? -1 : 1;
 
+            if (TorsoMovement)
+                currentSpeed *= 0.05f;
+
             var t = PhysicsBody.transform;
             
             PhysicsBody.MovePosition( new Vector2(t.position.x+currentSpeed,t.position.y));
         }
 
-        if(Input.GetKeyDown(Hit) && Sword)
+        if(Input.GetKeyDown(Hit) && Sword && SwordMovement)
         {
             if(GameManager.Freeze())
             {
@@ -78,5 +89,19 @@ public class Movement : MonoBehaviour {
             Sword.MovePosition(new Vector2(t.position.x+SwordForce*direction , t.position.y + SwordForce));
         }
     }
-    
+
+    internal void StartHeadMovement()
+    {
+        TorsoMovement = false;
+    }
+
+    internal void StartTorsoMovement()
+    {
+        TorsoMovement = true;
+        foreach (var rb in RigidBodies)
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
+        }
+        //PhysicsBody.constraints = RigidbodyConstraints2D.None;
+    }
 }

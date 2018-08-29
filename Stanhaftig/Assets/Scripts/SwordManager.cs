@@ -9,7 +9,7 @@ public class SwordManager : MonoBehaviour {
     public GameObject sparkleParticlesPrefab;
     public TrailRenderer SwordTrailParticles;
     private Vector2 LastPosistion;
-    public float SwingSpeedForSparkles = 5;
+    public float SwingSpeedForSparkles = 0.1f;
 
     private void Start()
     {

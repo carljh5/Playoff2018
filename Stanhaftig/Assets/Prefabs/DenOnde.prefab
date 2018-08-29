@@ -1808,7 +1808,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2281,15 +2281,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodParticlesPrefab: {fileID: 1079602603737598, guid: 635bcd971716f34408836419b37a4826,
     type: 2}
+  movement: {fileID: 0}
   limbs:
   - name: RArm
     parentJoint: {fileID: 233852859440637432}
-  - name: LArm
-    parentJoint: {fileID: 233136721920469294}
-  - name: RLeg
-    parentJoint: {fileID: 233976402326331036}
   - name: LLeg
     parentJoint: {fileID: 233872514889990636}
+  - name: RLeg
+    parentJoint: {fileID: 233976402326331036}
+  - name: LArm
+    parentJoint: {fileID: 233136721920469294}
   - name: Head
     parentJoint: {fileID: 233037515154108206}
 --- !u!114 &114671271512754630
@@ -2306,6 +2307,7 @@ MonoBehaviour:
   Left: 276
   Right: 275
   Hit: 273
+  TorsoMovement: 0
   TopSpeed: 0.2
   SecsUntillTopSpeed: 0.5
   AccelarationCurve:
