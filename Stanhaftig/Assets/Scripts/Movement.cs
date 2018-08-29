@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour {
 
     public float Jumping ;
     public float JumpTime;
+    public AnimationCurve JumpAcceleration;
+
     private float TorsoPositionY, HeadPositionY;
     private bool InTheAir;
 
@@ -165,7 +167,11 @@ public class Movement : MonoBehaviour {
 
             var t = body.transform;
 
-            body.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -1 : 1),  t.position.y + Jumping));
+            var xFactor = JumpAcceleration.Evaluate((Time.time-start)/ (secs));
+
+            //Debug.Log(xFactor);
+
+            body.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -xFactor : xFactor) ,  t.position.y + Jumping * xFactor));
             
         }
 
@@ -229,7 +235,7 @@ public class Movement : MonoBehaviour {
     {
         HeadMovement = true;
         TorsoMovement = false;
-        Jumping = 0.5f;
+        Jumping = 0.2f;
     }
 
     internal void StartTorsoMovement()

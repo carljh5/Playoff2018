@@ -1141,6 +1141,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114671271512754630, guid: 19f0c5427d048411aa13e843b8eef1a5,
+        type: 2}
+      propertyPath: JumpAcceleration.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4642625510013720, guid: 19f0c5427d048411aa13e843b8eef1a5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 11.04
