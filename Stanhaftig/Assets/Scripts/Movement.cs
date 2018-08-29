@@ -248,7 +248,7 @@ public class Movement : MonoBehaviour {
 
     internal void StartTorsoMovement()
     {
-        Jumping = 0;
+        Jumping = 0.08f;
         TorsoMovement = true;
         foreach (var rb in RigidBodies)
         {

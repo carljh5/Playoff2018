@@ -614,7 +614,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4045643388679388}
   - component: {fileID: 212869431716985468}
-  - component: {fileID: 114893637623079460}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Player2
@@ -2535,7 +2534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73510ab0d4a4eaf46baef77f7e48cf1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordManager: {fileID: 114893637623079460}
+  swordManager: {fileID: 114802654339726708}
   Movement: {fileID: 114415801450436142}
   LimbManager: {fileID: 114673257803571476}
   KeyHintCanvas: {fileID: 0}
@@ -2554,7 +2553,7 @@ MonoBehaviour:
   Right: 275
   Hit: 108
   Jump: 273
-  frozenColor: {r: 0, g: 0, b: 0, a: 0}
+  frozenColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   HeadMovement: 0
   freezeTime: 1
   freezeCoolDown: 1
@@ -2649,23 +2648,6 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886930447911312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 053859761ef7c7243a0ca7462284d176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opponentTag: 
-  CollisionDelay: 0
-  sparkleParticlesPrefab: {fileID: 1762360143390192, guid: 91ba5cd3859f94d4cb0ce98ce5bdbd1e,
-    type: 2}
-  SwordTrailParticles: {fileID: 96339394943612502}
-  SwingSpeedForSparkles: 0.1
---- !u!114 &114893637623079460
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1618519863770308}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 053859761ef7c7243a0ca7462284d176, type: 3}
