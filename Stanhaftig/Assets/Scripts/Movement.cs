@@ -82,7 +82,7 @@ public class Movement : MonoBehaviour {
 
         if(Input.GetKeyDown(Jump) &! frozen &! InTheAir)
         {
-            Debug.Log("jump");
+            //Debug.Log("jump");
 
 
             InTheAir = true;
@@ -179,7 +179,7 @@ public class Movement : MonoBehaviour {
         if (!HeadMovement)
             PhysicsBody.constraints = RigidbodyConstraints2D.FreezePositionY;
 
-        Debug.Log("No longer in the air");
+        //Debug.Log("No longer in the air");
         InTheAir = false;
     }
 
