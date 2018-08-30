@@ -24,7 +24,7 @@ public class PlayerTextBubbleBehaviour : MonoBehaviour {
         if (playerHead == null)
             playerHead = GameManager.GetPlayerHeadTransform(isPlayer1);
         StartCoroutine(waitForSeconds());
-        transform.position = playerHead.position + (Vector3.up * 1.5f);
+        transform.position = playerHead.position + (Vector3.up * 2.5f);
     }
 
     IEnumerator waitForSeconds()
@@ -58,6 +58,6 @@ public class PlayerTextBubbleBehaviour : MonoBehaviour {
     private void Update()
     {
         Vector3 curVelocity = Vector3.zero;
-        transform.position = Vector3.SmoothDamp(transform.position, (playerHead.position + (Vector3.up * 1.5f)), ref curVelocity, 0.1f);
+        transform.position = Vector3.SmoothDamp(transform.position, (playerHead.position + (Vector3.up * 2.5f)), ref curVelocity, 0.1f);
     }
 }
