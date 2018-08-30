@@ -458,7 +458,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243195499764767888, guid: 5855c99efd8ae1040aebf5704c0c27a6,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: de9e331dcf78a7b4781e23a5f367239e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6acd2bee6f4766c408fa2a7d22a70ea1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -590,3 +590,5 @@ MonoBehaviour:
   WinMusic: {fileID: 8300000, guid: 7ca73b4391d34ae4fb9e1bab369250b6, type: 3}
   FreezeAudio:
   - {fileID: 8300000, guid: 029ed995a7d750b4fb03880078920c22, type: 3}
+  Cry: {fileID: 8300000, guid: 689f9b7aa1f2f084ca0f503a1d94f588, type: 3}
+  Laugh: {fileID: 8300000, guid: 880059a7bc8d86b458892040c26fd4de, type: 3}
