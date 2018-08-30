@@ -20,6 +20,14 @@ public class LimbManager : MonoBehaviour
         public HingeJoint2D parentJoint;
 	}
 
+    private void FixedUpdate()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            LoseLimb();
+        }
+    }
+
     public GameObject equipment;
     private bool isEquipmentDetached;
     public SpriteRenderer spriteToToggleOnOnEquipmentLost;

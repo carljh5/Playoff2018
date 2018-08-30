@@ -1984,8 +1984,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.2
-  m_AngularDrag: 0.5
+  m_LinearDrag: 2
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2673,7 +2673,7 @@ MonoBehaviour:
   freezeTime: 1
   freezeCoolDown: 1
   TorsoMovement: 0
-  Jumping: 0.9
+  Jumping: 14
   JumpTime: 0.7
   JumpAcceleration:
     serializedVersion: 2
