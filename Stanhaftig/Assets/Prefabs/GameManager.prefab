@@ -201,7 +201,7 @@ MonoBehaviour:
     hasPlayed: 0
     isPossible: 0
     taunt: I beat you single-handedly!
-  - isAgressor: 1
+  - isAgressor: 0
     agressorLimbsLeft: 5
     defenderLimbsLeft: 5
     hasPlayed: 0
@@ -213,5 +213,47 @@ MonoBehaviour:
     hasPlayed: 0
     isPossible: 0
     taunt: Scum!
+  - isAgressor: 0
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 4
+    hasPlayed: 0
+    isPossible: 0
+    taunt: Mama never Loved you!
+  - isAgressor: 0
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 2
+    hasPlayed: 0
+    isPossible: 0
+    taunt: You son of a bitch!
+  - isAgressor: 1
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 4
+    hasPlayed: 0
+    isPossible: 0
+    taunt: Stand aside, Brother!
+  - isAgressor: 1
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 2
+    hasPlayed: 0
+    isPossible: 0
+    taunt: Father, forgive me.
+  - isAgressor: 1
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 1
+    hasPlayed: 0
+    isPossible: 0
+    taunt: Nice haircut
+  - isAgressor: 1
+    agressorLimbsLeft: 2
+    defenderLimbsLeft: 2
+    hasPlayed: 0
+    isPossible: 0
+    taunt: Why are you so stubborn?
+  - isAgressor: 1
+    agressorLimbsLeft: 5
+    defenderLimbsLeft: 1
+    hasPlayed: 0
+    isPossible: 0
+    taunt: Don't lose your head
   player1Taunts: []
   player2Taunts: []
