@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody2D[] RigidBodies;
 
-    private bool frozen = false;
+    public bool frozen = false;
     private bool freezeAvailable = true;
 
     private SpriteRenderer[] spriteList;
@@ -98,7 +98,7 @@ public class Movement : MonoBehaviour {
                 player2text.gameObject.SetActive(true);
                 SoundManager.PlayCry();
             }
-
+            TauntManager.instance.StopCoroutine(TauntManager.instance.co);
             SoundManager.PlayWin();
             StartCoroutine(EndScreenIn3());
             return;
@@ -154,24 +154,27 @@ public class Movement : MonoBehaviour {
         {
             if (GameManager.Freeze())
             {
+
                 //if (!frozen)
                 //{
-                    frozen = true;
-                    freezeAvailable = false;
+                frozen = true;
+                freezeAvailable = false;
 
-                    foreach (var rb in RigidBodies)
-                    {
-                        if (rb.gameObject.CompareTag("Untagged"))
-                            continue;
+                foreach (var rb in RigidBodies)
+                {
+                    if (rb.gameObject.CompareTag("Untagged"))
+                        continue;
 
-                        rb.freezeRotation = frozen;
-                    }
+                    rb.velocity *= 1.7f;
+
+                    rb.freezeRotation = frozen;
+                }
 
 
                 foreach (SpriteRenderer sprite in spriteList)
                 {
-                    if (sprite.gameObject.CompareTag("Untagged"))
-                        continue;
+                    //if (sprite.gameObject.CompareTag("Untagged"))
+                    //    continue;
 
                     sprite.color = frozenColor;
                 }

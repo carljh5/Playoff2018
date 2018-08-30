@@ -19,6 +19,8 @@ public class SoundManager : MonoBehaviour {
     public AudioClip Cry, Laugh, PutOnBucket;
     int lastSpeech;
 
+    bool fading = false;
+
 
     private void Start()
     {
@@ -89,6 +91,12 @@ public class SoundManager : MonoBehaviour {
     {
         if (instance.WinMusic && instance.FxAudio)
             instance.FxAudio.PlayOneShot(instance.WinMusic);
+
+        if(!instance.fading)
+        {
+            instance.fading = true;
+            instance.StartCoroutine(instance.fadeRoutine());
+        }
     }
 
     public static void PlayFreeze()
@@ -104,4 +112,21 @@ public class SoundManager : MonoBehaviour {
         return random;
     }
 
+    private IEnumerator fadeRoutine()
+    {
+        var fadeTime = 5f;
+        var start = Time.time;
+
+        var startVol = BackgroundAudio.volume;
+
+        while(start + fadeTime >= Time.time)
+        {
+            BackgroundAudio.volume = startVol * (1-(Time.time - start) / fadeTime);
+
+            yield return new WaitForFixedUpdate();
+
+        }
+
+    }
+    
 }

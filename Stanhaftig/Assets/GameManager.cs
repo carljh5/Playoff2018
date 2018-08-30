@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
     public ParticleSystem FreezeParticle;
     [SerializeField]
     private bool LivingSwordMode;
+    [SerializeField]
+    private bool SpaceRemovesLimbsMode;
     public Player Player1, Player2;
     private static GameManager instance;
     public float SwordForce;
@@ -123,6 +125,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public static bool Freeze() { return instance.FreezeMode; }
+    public static bool SpaceKills() { return instance.SpaceRemovesLimbsMode; }
+
 
     public static bool LivingSwordsMode() { return instance.LivingSwordMode; }
     public static ParticleSystem GetFreezeParticle() { return instance.FreezeParticle; }

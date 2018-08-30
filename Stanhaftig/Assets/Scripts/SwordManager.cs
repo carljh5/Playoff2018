@@ -11,9 +11,11 @@ public class SwordManager : MonoBehaviour {
     private Vector2 LastPosistion;
     public float SwingSpeedForSparkles = 0.1f;
     private Rigidbody2D SwordBody;
+    private Movement movement;
 
     private void Start()
     {
+        movement = GetComponentInParent<Movement>();
         SwordBody = GetComponent<Rigidbody2D>();
 
         if(!SwordTrailParticles)
@@ -43,7 +45,7 @@ public class SwordManager : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.relativeVelocity.magnitude < 10)
+        if ((collision.relativeVelocity.magnitude < 4) || (!movement.frozen && collision.relativeVelocity.magnitude < 10)  )
             return;
 
 
@@ -65,7 +67,7 @@ public class SwordManager : MonoBehaviour {
             var x = Instantiate(sparkleParticlesPrefab, transform);
             x.transform.position = collision.GetContact(0).point;
 
-            SwordBody.MovePosition(collision.relativeVelocity * 0.2f);
+            SwordBody.AddForce( collision.relativeVelocity * -20f);
         }
     }
 }
