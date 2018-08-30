@@ -154,18 +154,21 @@ public class Movement : MonoBehaviour {
         {
             if (GameManager.Freeze())
             {
+
                 //if (!frozen)
                 //{
-                    frozen = true;
-                    freezeAvailable = false;
+                frozen = true;
+                freezeAvailable = false;
 
-                    foreach (var rb in RigidBodies)
-                    {
-                        if (rb.gameObject.CompareTag("Untagged"))
-                            continue;
+                foreach (var rb in RigidBodies)
+                {
+                    if (rb.gameObject.CompareTag("Untagged"))
+                        continue;
 
-                        rb.freezeRotation = frozen;
-                    }
+                    rb.velocity *= 1.7f;
+
+                    rb.freezeRotation = frozen;
+                }
 
 
                 foreach (SpriteRenderer sprite in spriteList)
