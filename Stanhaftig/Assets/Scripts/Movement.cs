@@ -70,6 +70,14 @@ public class Movement : MonoBehaviour {
         }
     }
 
+    private void FixedUpdate()
+    {
+        if(InTheAir) //&& PhysicsBody.velocity.y < 0)
+        {
+            PhysicsBody.velocity += Vector2.up * Physics2D.gravity.y * 2.5f * Time.fixedDeltaTime;
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(Surrender))
@@ -212,7 +220,7 @@ public class Movement : MonoBehaviour {
 
             //Debug.Log(xFactor);
 
-            body.MovePosition(new Vector2(t.position.x + Jumping * (moveDirectionLeft ? -xFactor : xFactor) ,  t.position.y + Jumping * xFactor));
+            body.velocity += new Vector2(0.3f * Jumping * (moveDirectionLeft ? -xFactor : xFactor) ,  Jumping * xFactor);
             
         }
 
@@ -281,12 +289,12 @@ public class Movement : MonoBehaviour {
     {
         HeadMovement = true;
         TorsoMovement = false;
-        Jumping = 0.2f;
+        Jumping = 2f;
     }
 
     internal void StartTorsoMovement()
     {
-        Jumping = 0.08f;
+        Jumping = 5f;
         TorsoMovement = true;
         foreach (var rb in RigidBodies)
         {
