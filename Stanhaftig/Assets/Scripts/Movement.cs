@@ -69,15 +69,9 @@ public class Movement : MonoBehaviour {
             originalColorList[i] = spriteList[i].color;
         }
     }
-    
-    private void FixedUpdate()
+
+    private void Update()
     {
-
-        if (InTheAir) //&& PhysicsBody.velocity.y < 0)
-        {
-            PhysicsBody.velocity += Vector2.up * Physics2D.gravity.y * 2.5f * Time.fixedDeltaTime;
-        }
-
         if (Input.GetKeyDown(Surrender))
         {
             if (gameObject.CompareTag("Player"))
@@ -102,6 +96,17 @@ public class Movement : MonoBehaviour {
             return;
 
         }
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (InTheAir) //&& PhysicsBody.velocity.y < 0)
+        {
+            PhysicsBody.velocity += Vector2.up * Physics2D.gravity.y * 2.5f * Time.fixedDeltaTime;
+        }
+
+
 
 
         if(Input.GetKey(Left))
