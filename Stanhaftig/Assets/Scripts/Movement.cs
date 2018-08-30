@@ -299,6 +299,7 @@ public class Movement : MonoBehaviour {
     {
         HeadMovement = true;
         TorsoMovement = false;
+        TopSpeed *= 0.4f;
         Jumping = 2f;
     }
 
