@@ -69,17 +69,15 @@ public class Movement : MonoBehaviour {
             originalColorList[i] = spriteList[i].color;
         }
     }
-
+    
     private void FixedUpdate()
     {
-        if(InTheAir) //&& PhysicsBody.velocity.y < 0)
+
+        if (InTheAir) //&& PhysicsBody.velocity.y < 0)
         {
             PhysicsBody.velocity += Vector2.up * Physics2D.gravity.y * 2.5f * Time.fixedDeltaTime;
         }
-    }
 
-    private void Update()
-    {
         if (Input.GetKeyDown(Surrender))
         {
             if (gameObject.CompareTag("Player"))
@@ -106,12 +104,12 @@ public class Movement : MonoBehaviour {
         }
 
 
-        if(Input.GetKeyDown(Left))
+        if(Input.GetKey(Left))
         {
             moveDirectionLeft = true;
             StartMoveTime = Time.time;
         }
-        else if (Input.GetKeyDown(Right))
+        else if (Input.GetKey(Right))
         {
             moveDirectionLeft = false;
             StartMoveTime = Time.time;
@@ -132,7 +130,7 @@ public class Movement : MonoBehaviour {
             PhysicsBody.velocity += ( new Vector2(currentSpeed,0));
         }
 
-        if(Input.GetKeyDown(Jump) &! frozen &! InTheAir)
+        if(Input.GetKey(Jump) &! frozen &! InTheAir)
         {
             //Debug.Log("jump");
 
@@ -150,7 +148,7 @@ public class Movement : MonoBehaviour {
 
         }
 
-        if(Input.GetKeyDown(Hit) && Sword && SwordMovement && freezeAvailable)
+        if(Input.GetKey(Hit) && Sword && SwordMovement && freezeAvailable)
         {
             if (GameManager.Freeze())
             {
