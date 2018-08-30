@@ -22,7 +22,7 @@ public class LimbManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && GameManager.SpaceKills())
         {
             LoseLimb();
         }
