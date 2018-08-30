@@ -2300,6 +2300,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.size
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4031845833561538, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.349295
@@ -2357,6 +2362,46 @@ Prefab:
       propertyPath: player2text
       value: 
       objectReference: {fileID: 258070134}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[23].isAgressor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[23].agressorLimbsLeft
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[23].defenderLimbsLeft
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[23].taunt
+      value: Why are you so stubborn?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[24].isAgressor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[24].agressorLimbsLeft
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[24].defenderLimbsLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+        type: 2}
+      propertyPath: taunts.Array.data[24].taunt
+      value: Don't lose your head
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
   m_IsPrefabAsset: 0
