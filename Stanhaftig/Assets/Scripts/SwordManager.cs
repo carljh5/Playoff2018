@@ -65,7 +65,7 @@ public class SwordManager : MonoBehaviour {
             var x = Instantiate(sparkleParticlesPrefab, transform);
             x.transform.position = collision.GetContact(0).point;
 
-            SwordBody.MovePosition(collision.relativeVelocity * 0.2f);
+            SwordBody.AddForce( collision.relativeVelocity * -20f);
         }
     }
 }
