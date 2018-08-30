@@ -127,7 +127,7 @@ public class Movement : MonoBehaviour {
 
             var t = PhysicsBody.transform;
             
-            PhysicsBody.MovePosition( new Vector2(t.position.x+currentSpeed,t.position.y));
+            PhysicsBody.velocity += ( new Vector2(currentSpeed,0));
         }
 
         if(Input.GetKeyDown(Jump) &! frozen &! InTheAir)

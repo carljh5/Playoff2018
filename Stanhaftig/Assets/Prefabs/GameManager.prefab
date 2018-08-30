@@ -59,8 +59,8 @@ MonoBehaviour:
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   SwordForce: 1
-  TopSpeed: 0.2
-  SecsUntillTopSpeed: 0.5
+  TopSpeed: 0.4
+  SecsUntillTopSpeed: 0
   AccelarationCurve:
     serializedVersion: 2
     m_Curve:
