@@ -27,7 +27,7 @@ public class ParallaxPlane : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (!parallax.isReady)
             return;
         Vector3 target = OrigPos + (parallax.DeltaDistance() * (parallax.speed / layerModifier));

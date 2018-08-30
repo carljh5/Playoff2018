@@ -35,13 +35,14 @@ public class Parallax : MonoBehaviour {
         return lastPos - targetToFollow;
     }
 
-	// Update is called once per frame
-	void Update () {
+	
+
+    private void FixedUpdate()
+    {
         if (isReady)
         {
             lastPos = targetToFollow;
             targetToFollow = (p1.position + p2.position) / 2;
         }
-		
-	}
+    }
 }
