@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody2D[] RigidBodies;
 
-    private bool frozen = false;
+    public bool frozen = false;
     private bool freezeAvailable = true;
 
     private SpriteRenderer[] spriteList;
@@ -170,8 +170,8 @@ public class Movement : MonoBehaviour {
 
                 foreach (SpriteRenderer sprite in spriteList)
                 {
-                    if (sprite.gameObject.CompareTag("Untagged"))
-                        continue;
+                    //if (sprite.gameObject.CompareTag("Untagged"))
+                    //    continue;
 
                     sprite.color = frozenColor;
                 }
