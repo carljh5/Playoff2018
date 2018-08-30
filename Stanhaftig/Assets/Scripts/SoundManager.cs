@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip[] SpeechYellPlayer2;
     public AudioClip WinMusic;
     public AudioClip[] FreezeAudio;
-    public AudioClip Cry, Laugh;
+    public AudioClip Cry, Laugh, PutOnBucket;
     int lastSpeech;
 
 
@@ -31,6 +31,12 @@ public class SoundManager : MonoBehaviour {
     {
         if (instance.Cry && instance.FxAudio)
             instance.FxAudio.PlayOneShot(instance.Cry);
+    }
+
+    public static void PlayBucket()
+    {
+        if (instance.PutOnBucket && instance.FxAudio)
+            instance.FxAudio.PlayOneShot(instance.PutOnBucket);
     }
 
     public static void PlayLaugh()
