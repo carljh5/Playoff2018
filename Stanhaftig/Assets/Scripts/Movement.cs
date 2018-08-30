@@ -120,7 +120,7 @@ public class Movement : MonoBehaviour {
         if (!frozen &! InTheAir && (Input.GetKey(Left) || Input.GetKey(Right)))
         {
 
-            currentSpeed = AccelarationCurve.Evaluate(Mathf.Clamp((Time.time - StartMoveTime) / SecsUntillTopSpeed, 0, 1)) * TopSpeed;
+            currentSpeed = TopSpeed;// AccelarationCurve.Evaluate(Mathf.Clamp((Time.time - StartMoveTime) / SecsUntillTopSpeed, 0, 1)) * TopSpeed;
 
             currentSpeed *= moveDirectionLeft ? -1 : 1;
 
@@ -161,6 +161,8 @@ public class Movement : MonoBehaviour {
 
                     foreach (var rb in RigidBodies)
                     {
+                        if (rb.gameObject.CompareTag("Untagged"))
+                            continue;
 
                         rb.freezeRotation = frozen;
                     }
@@ -168,6 +170,9 @@ public class Movement : MonoBehaviour {
 
                 foreach (SpriteRenderer sprite in spriteList)
                 {
+                    if (sprite.gameObject.CompareTag("Untagged"))
+                        continue;
+
                     sprite.color = frozenColor;
                 }
 
