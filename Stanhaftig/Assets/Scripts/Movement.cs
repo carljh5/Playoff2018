@@ -98,7 +98,7 @@ public class Movement : MonoBehaviour {
                 player2text.gameObject.SetActive(true);
                 SoundManager.PlayCry();
             }
-
+            TauntManager.instance.StopCoroutine(TauntManager.instance.co);
             SoundManager.PlayWin();
             StartCoroutine(EndScreenIn3());
             return;
