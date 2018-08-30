@@ -113,7 +113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1243493647152820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Paw H\xF8vsgaard\nMathias Munk Ulrich\nCarl Johan Hanberg"
+  m_text: "PAW H\xF8VSGAARD\nMATHIAS MUNK ULRICH\nCARL JOHAN HANBERG"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 174fdb6b3964a47708aa4ee4a5f1e32b, type: 2}
   m_sharedMaterial: {fileID: 21075971623475924, guid: 174fdb6b3964a47708aa4ee4a5f1e32b,
