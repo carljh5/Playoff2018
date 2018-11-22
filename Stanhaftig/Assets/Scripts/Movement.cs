@@ -9,6 +9,9 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody2D[] RigidBodies;
 
+    [HideInInspector]
+    public Rigidbody2D OpponentGameObject;
+
     public bool frozen = false;
     private bool freezeAvailable = true;
 
@@ -155,6 +158,7 @@ public class Movement : MonoBehaviour {
 
         if(Input.GetKey(Hit) && Sword && SwordMovement && freezeAvailable)
         {
+            return;
             if (GameManager.Freeze())
             {
 
@@ -196,10 +200,18 @@ public class Movement : MonoBehaviour {
             {
                 var t = Sword.transform;
 
-                //if sword is up hit down and vice versa
-                var x = t.rotation.z > 0 ? SwordForce : -SwordForce;
+                Debug.Log("hit: "+ t.rotation.z);
 
-                Sword.MovePosition(new Vector2(t.position.x + SwordForce * direction, t.position.y + SwordForce));
+                //if sword is up hit down and vice versa
+                //var x = t.rotation.z > 0 ? SwordForce : -SwordForce;
+
+                //hit in the direction of the opponent normalized
+                var x = OpponentGameObject.transform.position - t.position;
+                //x.Normalize();
+
+                Sword.MovePosition(new Vector2(t.position.x + x.y, t.position.y +x.y));
+
+                Debug.DrawLine(t.position, x);
             }
         }
     }
