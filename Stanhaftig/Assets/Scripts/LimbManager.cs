@@ -38,7 +38,7 @@ public class LimbManager : MonoBehaviour
     public List<Limb> limbs = new List<Limb>();
 
     public void DetachLimb(Limb limb) {
-        if(!isEquipmentDetached) {
+        if(limb.name.Equals("Head") &!isEquipmentDetached) {
             equipment.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             equipment.GetComponent<CapsuleCollider2D>().enabled = true;
             if(spriteToToggleOnOnEquipmentLost != null)
@@ -68,7 +68,7 @@ public class LimbManager : MonoBehaviour
         {
             lLegDetached = true;
 
-            if (lLegDetached)
+            if (rLegDetached)
             {
                 giveUpCanvas.gameObject.SetActive(true);
                 movement.StartTorsoMovement();
@@ -116,7 +116,7 @@ public class LimbManager : MonoBehaviour
 
     public void LoseLimb(Limb preferedLimb)
     {
-        if (preferedLimb == null || preferedLimb.name.Equals("LArm") || preferedLimb.name.Equals("Head"))
+        if (preferedLimb == null || preferedLimb.name.Equals("LArm") || (preferedLimb.name.Equals("Head")&& isEquipmentDetached))
             DetachLimb(limbs[0]); //should we maybe not do anything if it is the head or sword arm?
         else
             DetachLimb(preferedLimb);
