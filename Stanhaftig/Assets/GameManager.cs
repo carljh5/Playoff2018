@@ -59,6 +59,12 @@ public class GameManager : MonoBehaviour {
         Player1.Movement.SwordForce = SwordForce;
         Player2.Movement.SwordForce = SwordForce;
 
+        Player1.Movement.OpponentGameObject = Player2.Movement.PhysicsBody;
+        Player2.Movement.OpponentGameObject = Player1.Movement.PhysicsBody;
+
+        Player1.swordManager.oponentLimbManager = Player2.LimbManager;
+        Player2.swordManager.oponentLimbManager = Player1.LimbManager;
+
         Player1.gameObject.SetActive(false);
         Player2.gameObject.SetActive(false);
 
@@ -67,20 +73,21 @@ public class GameManager : MonoBehaviour {
     public static float GetCollisionDelay() {
         return instance.CollisionDelay; }
 
-    public static void LoseLimb(int Player)
+    //since sword manager has access this should prob be moved to there
+    public static void LoseLimb(int Player,LimbManager.Limb preferedLimb = null)
     {
         SoundManager.PlayBlood();
 
         if (Player == 1)
         {
-            instance.Player1.LimbManager.LoseLimb();
+            instance.Player1.LimbManager.LoseLimb(preferedLimb);
             TauntManager.PlayTaunt(instance.Player2, instance.Player1);
             SoundManager.PlayYellPlayer1();
         }
         else if (Player == 2)
         {
 
-            instance.Player2.LimbManager.LoseLimb();
+            instance.Player2.LimbManager.LoseLimb(preferedLimb);
             TauntManager.PlayTaunt(instance.Player1, instance.Player2);
             SoundManager.PlayYellPlayer2();
         }

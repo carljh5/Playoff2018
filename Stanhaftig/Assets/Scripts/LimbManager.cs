@@ -14,6 +14,9 @@ public class LimbManager : MonoBehaviour
     [HideInInspector]
     public Movement movement;
 
+    private bool lLegDetached = false;
+    private bool rLegDetached = false;
+
     [Serializable]
 	public class Limb {
         public string name;
@@ -24,7 +27,7 @@ public class LimbManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && GameManager.SpaceKills())
         {
-            LoseLimb();
+            LoseLimb(null);
         }
     }
 
@@ -49,14 +52,27 @@ public class LimbManager : MonoBehaviour
         //detach by deactivating hingejoint
         limb.parentJoint.enabled = false;
 
-
-
+        int[] ints = new int[4];
+        
         if (limb.name.Equals("RLeg")) // No more legs
         {
-            giveUpCanvas.gameObject.SetActive(true);
+            rLegDetached = true;
 
+            if (lLegDetached)
+            {
+                giveUpCanvas.gameObject.SetActive(true);
+                movement.StartTorsoMovement();
+            }
+        }
+        else if (limb.name.Equals("LLeg")) // No more legs
+        {
+            lLegDetached = true;
 
-            movement.StartTorsoMovement();
+            if (lLegDetached)
+            {
+                giveUpCanvas.gameObject.SetActive(true);
+                movement.StartTorsoMovement();
+            }
         }
         else if (limb.name.Equals("LArm"))
         {
@@ -98,9 +114,42 @@ public class LimbManager : MonoBehaviour
     }
 
 
-    public void LoseLimb()
+    public void LoseLimb(Limb preferedLimb)
     {
-        DetachLimb(limbs[0]);
+        if (preferedLimb == null || preferedLimb.name.Equals("LArm") || preferedLimb.name.Equals("Head"))
+            DetachLimb(limbs[0]); //should we maybe not do anything if it is the head or sword arm?
+        else
+            DetachLimb(preferedLimb);
+
     }
 	
+
+    public Limb GetLimb(GameObject limb)
+    {
+        var currentJoint = limb.GetComponent<HingeJoint2D>();
+
+        if (currentJoint == null)
+            currentJoint = limb.GetComponentInParent<HingeJoint2D>();
+
+        while(currentJoint != null)
+        {
+            var l = GetLimbFromJoint(currentJoint);
+            if (l != null)
+                return l;
+            else if (currentJoint.gameObject.transform.parent)
+                currentJoint = currentJoint.gameObject.transform.parent.GetComponentInParent<HingeJoint2D>();
+            else break;
+        }
+
+        Debug.Log("null limb");
+        return null;
+    }
+
+    private Limb GetLimbFromJoint(HingeJoint2D joint)
+    {
+        foreach (var l in limbs)
+            if (l.parentJoint == joint) return l;
+
+        return null;
+    }
 }

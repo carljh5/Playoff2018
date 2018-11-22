@@ -12,6 +12,8 @@ public class SwordManager : MonoBehaviour {
     public float SwingSpeedForSparkles = 0.1f;
     private Rigidbody2D SwordBody;
     private Movement movement;
+    [HideInInspector]
+    public LimbManager oponentLimbManager;
 
     private void Start()
     {
@@ -57,7 +59,7 @@ public class SwordManager : MonoBehaviour {
 
             collision.otherRigidbody.AddForce(collision.relativeVelocity*-1);
 
-            GameManager.LoseLimb(opponent);
+            GameManager.LoseLimb(opponent,oponentLimbManager.GetLimb(collision.gameObject));
         }
 
         else if (collision.gameObject.CompareTag("Sword"))
