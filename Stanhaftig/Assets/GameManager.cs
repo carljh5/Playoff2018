@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame()
     {
-        if (Input.GetKeyDown(Player1.Movement.Jump))
+        if (Input.GetKeyDown(Player1.Movement.Hit))
         {
 
             if (Player1.KeyHintCanvas.activeInHierarchy)
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour {
                 Player1.KeyHintCanvas.SetActive(false);
         }
 
-        if (Input.GetKeyDown(Player2.Movement.Jump))
+        if (Input.GetKeyDown(Player2.Movement.Hit))
         {
             if (Player2.KeyHintCanvas.activeInHierarchy)
             {
