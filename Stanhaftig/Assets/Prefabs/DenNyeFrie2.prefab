@@ -1912,7 +1912,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50090709210377426
 Rigidbody2D:
@@ -1932,7 +1932,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50214923051697612
 Rigidbody2D:
@@ -1972,7 +1972,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50360075667560038
 Rigidbody2D:
@@ -1992,7 +1992,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50375722298906198
 Rigidbody2D:
@@ -2012,7 +2012,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50429921729928228
 Rigidbody2D:
@@ -2032,7 +2032,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 2
 --- !u!50 &50555045445012146
 Rigidbody2D:
@@ -2052,7 +2052,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50599775991706864
 Rigidbody2D:
@@ -2072,7 +2072,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50747326536176814
 Rigidbody2D:
@@ -2092,7 +2092,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50824322742410254
 Rigidbody2D:
@@ -2112,7 +2112,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50922688954748246
 Rigidbody2D:
@@ -2605,20 +2605,21 @@ MonoBehaviour:
   Hit: 108
   Jump: 273
   Surrender: 107
+  OpponentGameObject: {fileID: 0}
   frozen: 0
   frozenColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   HeadMovement: 0
   freezeTime: 1
   freezeCoolDown: 1
   TorsoMovement: 0
-  Jumping: 14
+  Jumping: 16
   JumpTime: 0.7
   JumpAcceleration:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: -0.0041656494
-      value: 0.9937439
+      value: 0.9999548
       inSlope: -0.13105418
       outSlope: -0.13105418
       tangentMode: 0
@@ -2626,8 +2627,17 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.42738533
     - serializedVersion: 3
-      time: 1
-      value: 0
+      time: 0.87928945
+      value: 0.27807775
+      inSlope: -1.0333129
+      outSlope: -1.0333129
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0000062
+      value: -0.04968205
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2714,6 +2724,7 @@ MonoBehaviour:
     type: 2}
   SwordTrailParticles: {fileID: 96339394943612502}
   SwingSpeedForSparkles: 0.1
+  oponentLimbManager: {fileID: 0}
 --- !u!212 &212009900583591178
 SpriteRenderer:
   m_ObjectHideFlags: 1

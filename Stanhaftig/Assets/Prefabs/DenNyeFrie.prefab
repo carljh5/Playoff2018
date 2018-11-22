@@ -1970,7 +1970,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50168450396025936
 Rigidbody2D:
@@ -1990,7 +1990,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50171032197077030
 Rigidbody2D:
@@ -2030,7 +2030,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50397958840373872
 Rigidbody2D:
@@ -2050,7 +2050,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 6
 --- !u!50 &50486324901324898
 Rigidbody2D:
@@ -2070,7 +2070,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50645801722603864
 Rigidbody2D:
@@ -2090,7 +2090,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50822744340746122
 Rigidbody2D:
@@ -2130,7 +2130,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50963266635764610
 Rigidbody2D:
@@ -2150,7 +2150,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50970858406386076
 Rigidbody2D:
@@ -2170,7 +2170,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50974075260593218
 Rigidbody2D:
@@ -2190,7 +2190,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!50 &50980184567110880
 Rigidbody2D:
@@ -2235,7 +2235,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.07806301, y: 0.35893267}
+  m_Size: {x: 0.13, y: 0.35893267}
   m_EdgeRadius: 0
 --- !u!61 &61188785992089044
 BoxCollider2D:
@@ -2609,6 +2609,7 @@ MonoBehaviour:
     type: 2}
   SwordTrailParticles: {fileID: 96071071709915608}
   SwingSpeedForSparkles: 0.1
+  oponentLimbManager: {fileID: 0}
 --- !u!114 &114388946006605200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2668,13 +2669,14 @@ MonoBehaviour:
   Hit: 102
   Jump: 119
   Surrender: 116
+  OpponentGameObject: {fileID: 0}
   frozen: 0
   frozenColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
   HeadMovement: 0
   freezeTime: 1
   freezeCoolDown: 1
   TorsoMovement: 0
-  Jumping: 14
+  Jumping: 16
   JumpTime: 0.7
   JumpAcceleration:
     serializedVersion: 2
@@ -2689,8 +2691,17 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.42738533
     - serializedVersion: 3
-      time: 1
-      value: 0
+      time: 0.9595942
+      value: 0.101362824
+      inSlope: -1.1913046
+      outSlope: -1.1913046
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.35640654
+    - serializedVersion: 3
+      time: 0.9874542
+      value: -0.08618736
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4884,15 +4895,15 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.080886155, y: 0.24265869}
-  m_ConnectedAnchor: {x: 0.30476564, y: -0.20167398}
+  m_Anchor: {x: 0.05, y: 0.24265869}
+  m_ConnectedAnchor: {x: 0.2738795, y: -0.20167398}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -90
+    m_LowerAngle: -45
     m_UpperAngle: 90
 --- !u!233 &233498938249606364
 HingeJoint2D:

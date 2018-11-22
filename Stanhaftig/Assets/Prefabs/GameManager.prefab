@@ -59,8 +59,8 @@ MonoBehaviour:
   SpaceRemovesLimbsMode: 0
   Player1: {fileID: 0}
   Player2: {fileID: 0}
-  SwordForce: 1
-  TopSpeed: 1.4
+  SwordForce: 0.5
+  TopSpeed: 4.5
   SecsUntillTopSpeed: 0
   AccelarationCurve:
     serializedVersion: 2
@@ -74,6 +74,15 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.040535912
+      value: 0.55234826
+      inSlope: 1.5939281
+      outSlope: 1.5939281
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
