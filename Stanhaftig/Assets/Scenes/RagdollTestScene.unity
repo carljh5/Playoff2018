@@ -2143,11 +2143,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4031845833561538, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.349295
@@ -2180,16 +2175,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: player1text
-      value: 
-      objectReference: {fileID: 629405260}
-    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: player2text
-      value: 
-      objectReference: {fileID: 258070134}
     - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
         type: 2}
       propertyPath: Player1
@@ -2205,56 +2190,16 @@ Prefab:
       propertyPath: EndScreenGameObject
       value: 
       objectReference: {fileID: 1681938010}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
         type: 2}
-      propertyPath: SwordForce
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
+      propertyPath: player1text
+      value: 
+      objectReference: {fileID: 629405260}
+    - target: {fileID: 114616477484247446, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
         type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[1].time
-      value: 0.040535912
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[1].value
-      value: 0.55234826
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[1].inSlope
-      value: 1.5939281
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[1].outSlope
-      value: 1.5939281
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[2].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: AccelarationCurve.m_Curve.Array.data[2].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114463716595367872, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe,
-        type: 2}
-      propertyPath: TopSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
+      propertyPath: player2text
+      value: 
+      objectReference: {fileID: 258070134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae44c9ea1b905b4c8d81d5e434ae2fe, type: 2}
   m_IsPrefabAsset: 0

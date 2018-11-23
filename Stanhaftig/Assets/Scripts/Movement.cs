@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +6,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
     
     public KeyCode Left, Right,Hit, Jump, Surrender;
+
+    private static bool surrendering = false;
 
     private Rigidbody2D[] RigidBodies;
 
@@ -56,6 +58,8 @@ public class Movement : MonoBehaviour {
 
     private void Start()
     {
+        surrendering = false;
+
         RigidBodies = GetComponentsInChildren<Rigidbody2D>();
 
         direction = ((int)transform.localScale.x) * -1;
@@ -75,8 +79,10 @@ public class Movement : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(Surrender))
+        if (Input.GetKeyDown(Surrender) &! surrendering)
         {
+            surrendering = true;
+
             if (gameObject.CompareTag("Player"))
             {
                 var player1text = TauntManager.GetPlayer1Text();
@@ -228,6 +234,7 @@ public class Movement : MonoBehaviour {
 
         Debug.Log("game done");
         GameManager.Endscreen().SetActive(true);
+        
     }
 
     private IEnumerator MoveBodyOverTime(Rigidbody2D body, float secs)
