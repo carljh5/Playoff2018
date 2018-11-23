@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -290,7 +290,7 @@ public class Movement : MonoBehaviour {
 
     IEnumerator ReFreezeHeadAfterJump()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(JumpTime);
 
         yield return new WaitUntil(() => HeadBody.position.y <= HeadPositionY && (HeadMovement || !InTheAir));
         
@@ -298,7 +298,6 @@ public class Movement : MonoBehaviour {
             HeadBody.constraints = RigidbodyConstraints2D.FreezePositionY;
 
         InTheAir = false;
-
     }
     IEnumerator ReFreezeBodyAfterJump()
     {
